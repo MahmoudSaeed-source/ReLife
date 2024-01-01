@@ -1,0 +1,52 @@
+:root{
+  --main-font-family-En: 'Noto Serif JP', serif;
+  --title-font-family-Ar: 'Changa', sans-serif;
+  --paragraph-font-family-Ar:'Cairo', sans-serif;
+  --btn-font-family-Ar: 'Cairo', sans-serif;
+  --space-between-sections:40px;
+  --main-font-color-title:#65B741;
+  --main-btn-color:#194e02;
+  --paragraph-color:#C7E9B0;
+  --btn-font-color-onhover : #C7E9B0;
+  --main-btn-bg-color:#C1F2B0;
+  --hover-btn-bg-color:#7A9D54;
+  --title-font-size:30px;
+  --paragraph-font-size:22px;
+  --btn-font-size:18px;
+  --btn-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+button{
+  font-size: var(--btn-font-size);
+  font-family: var(--btn-font-family-Ar);
+  background-color: var(--main-btn-bg-color);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  color:var(--main-btn-color);
+  box-shadow: var(--btn-shadow); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+button:hover{
+  background-color: var(--hover-btn-bg-color);
+  color:var(--btn-font-color-onhover);
+  font-weight: 500;
+}
+body{
+  width: 100%;
+  height: 100%;
+font-family:var(--btn-font-family-Ar) ;
+}
