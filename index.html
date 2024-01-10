@@ -1,40 +1,227 @@
 <!doctype html>
-<html lang="ar">
+<html dir="rtl" lang="ar">
+
   <head>
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap"
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap"
       rel="stylesheet">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;500;600;700;800;900&display=swap"
-          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous">
     <link rel="icon" type="image/svg+xml" href="./assets/logo/2.png" />
-    <link rel="stylesheet"  href="./css/mainStyle.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/mainStyle.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ReLife</title>
   </head>
-  <body>
- <header>
-  <nav>
-    <div class="top_Nav">
 
-    </div>
-    <div class="main_Nav">
-    <div class="logo"></div>
-      <ul class="Links"></ul>
-    </div>
-   
-  </nav>
-  <section class="Hero_Section"></section>
- </header>
- <main></main>
- <footer></footer>
-    <script type="module" src="/main.js"></script>
-  </body>
-</html>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <nav>
+            <div class="top_Nav">
+              <div class="user">
+                <i class="fa-regular fa-user"></i>
+                <span>تسجيل الدخول</span>
+              </div>
+              <div class="social_Icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+              <div class="phon">
+                <i class="fa-solid fa-phone-flip"></i>
+                <span>01012345678</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main_Nav">
+          <div class="logo">
+            <h1>ReLife</h1>
+          </div>
+          <ul class="Links">
+            <li><a href>الصفحه الرئسية</a></li>
+            <li><a href>المنتجات</a></li>
+            <li><a href>من نحن</a></li>
+            <li><a href>توصل معنا</a></li>
+          </ul>
+        </div>
+      </nav>
+      <section class="Hero_Section">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide st-slide ">
+              <h1>نوصلك فى اى مكان<h1>
+                  <h3>جهز مخلفاتك ومحفظتك كمان لانك هتكسب كمان</h3>
+                  <button class="saleNow">بيع الان</button>
+                </div>
+                <div class="swiper-slide sec-slide">
+                  <h1>احنا هنشترى كل مخلفاتك </h1>
+                  <h3>كل اللى عليك انك تفصلهم بس </h3>
+                  <button class="saleNow">بيع الان</button>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </section>
+        </header>
+        <main>
+          <div class="container">
+            <section class="about-us animate__animated animate__bounceInUp">
+              <h2>احنا مين</h2>
+              <p>
+                احنا شركه Relife
+              </p>
+              <p>شركه مصريه متخصصه فى تدوير المخلفات </p>
+              <p>هنشترى منك المخلفات مثل البلاستيك والمعادن والالكترونيات وهنعيد
+                تدويرها </p>
+            </section>
+            <section class="win-with-us animate__animated animate__bounceInUp">
+              <h2>تكسب من خلالنا ازاى</h2>
+              <div class="descrpition">
+                <div class="des_member register_Now">
+                  <div class="image_Descrpition"></div>
+                  <div class="descrpition_Section">
+                    <p>تسجل معنا على الموقع </p>
+                    <button> سجل الان </button>
+                  </div>
+                </div>
+                <div class="des_member waste_collection">
+                  <div class="image_Descrpition"></div>
+                  <div class="descrpition_Section">
+                    <p>جمع المخلفات وافصل كل نوع لوحده </p>
+                    <button> بيع الان</button>
+                  </div>
+                </div>
+                <div class="des_member sale_product">
+                  <div class="image_Descrpition"></div>
+                  <div class="descrpition_Section">
+                    <p>  ادخل بحسابك وبيع اللى جمعته</p>
+                    <button> بيع الان</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="payment_Systems">
+              <h2>المدفوعات</h2>
+            <div class="swiper payment_Systems_Swiper">
+              <div class="swiper-wrapper">
+              <div class="swiper-slide payment_way">
+                                  <h4 class="payment_title">كاش عند التوصيل </h4>
+                                  <div class="payment_image">
+                                    <img src="./assets/payment-system/4300524.jpg" alt="كاش"/>
+                                  </div>
+                                </div>
+                <div class="swiper-slide payment_way">
+                  <h4 class="payment_title">محفظه الكترونية</h4>
+                  <div class="payment_image">
+                    <img src="./assets/payment-system/4142132.jpg" alt="كاش" />
+                  </div>
+                </div>
+                <div class="swiper-slide payment_way">
+                  <h4 class="payment_title">تجميع النقاط</h4>
+                  <div class="payment_image">
+                    <img src="./assets/payment-system/3021507.jpg" alt="كاش" />
+                  </div>
+                </div>
+                <div class="swiper-slide payment_way">
+                  <h4 class="payment_title">تتبرع بيهم</h4>
+                  <div class="payment_image">
+                    <img src="./assets/payment-system/4869878.jpg" alt="كاش" />
+                  </div>
+                </div>
+               
+              
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="autoplay-progress">
+                <svg viewBox="0 0 48 48">
+                  <circle cx="24" cy="24" r="20"></circle>
+                </svg>
+                <span></span>
+              </div>
+            </div>
+
+            </section>
+          </div>
+        </main>
+        <footer></footer>
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+          crossorigin="anonymous"></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+    var swiper = new Swiper(".mySwiper",{
+      rewind: true,
+      spaceBetween: 100,
+      centeredSlides: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+ <script>
+  const progressCircle = document.querySelector(".autoplay-progress svg");
+  const progressContent = document.querySelector(".autoplay-progress span");
+  var swiper = new Swiper(".payment_Systems_Swiper",{
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    on: {
+      autoplayTimeLeft(s,time,progress) {
+        progressCircle.style.setProperty("--progress",1 - progress);
+        progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+      }
+    }
+  });
+</script>
+        <script src="./all.min.js"></script>
+        <script type="module" src="./main.js"></script>
+      </body>
+
+    </html>
