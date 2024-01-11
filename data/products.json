@@ -1,0 +1,157 @@
+{
+  "paper":[
+    {
+      "name":"books",
+      "point":100,
+      "price":12,
+      "urlImage": "../assets/products/paper/books.png"
+    },
+    {
+      "name":"blankPaper",
+      "point":80,
+      "price":7,
+      "urlImage": "../assets/products/paper/blankpaper.png"
+    },
+    {
+      "name":"cartoon",
+      "point":130,
+      "price":30,
+      "urlImage": "../assets/products/paper/cartoon.png"
+    },
+    {
+      "nam":"magazine",
+      "point":80,
+      "price":20,
+      "urlImage": "../assets/products/paper/magazine.png"
+    },
+    {
+      "name":"newspaper",
+      "point":80,
+      "price":25,
+      "urlImage": "../assets/products/paper/newspaper.png"
+    }
+
+  ],
+  "Plastic":[
+     {
+      "name":"Plastic water bottle small",
+      "point":1,
+      "price":0.10,
+      "urlImage": "../assets/products/Plastic/small.jpg"
+    },
+    {
+      "name":"Plastic water bottle big",
+      "point":2,
+      "price":0.20,
+      "urlImage": "../assets/products/Plastic/big.jpg"
+    },
+    {
+      "name":"Plastic water bottle large",
+      "point":5,
+      "price":0.50,
+      "urlImage": "../assets/products/Plastic/large.jpg"
+    },
+    {
+      "nam":"cher",
+      "point":10,
+      "price":3,
+      "urlImage": "../assets/products/Plastic/cher.png"
+    },
+    {
+      "name":"some Plastic",
+      "point":5,
+      "price":2,
+      "urlImage": "../assets/products/Plastic/Ghk5ylX4gtpHQjax7M1n5dvGf1VZGXwKkKcWkVR1.png"
+    },
+    {
+      "name":"Drums",
+      "point":10,
+      "price":10,
+      "urlImage": "../assets/products/Plastic/dW0WRAD5XbEgr2SYPWUEinXvQidnjYHdYtvJP6uJ.png"
+    }
+
+  ],
+  "Electronics":[
+     {
+      "name":"cpu",
+      "point":300,
+      "price":70,
+      "urlImage": "../assets/products/Electronics/cpu.png"
+
+    },
+    {
+      "name":"fan",
+      "point":2,
+      "price":3,
+      "urlImage": "../assets/products/Electronics/fan.png"
+    },
+    {
+      "name":"hard",
+      "point":80,
+      "price":9,
+      "urlImage": "../assets/products/Electronics/hard.png"
+    },
+    {
+      "nam":"ipod",
+      "point":130,
+      "price":80,
+      "urlImage": "../assets/products/Electronics/ipod.png"
+    },
+    {
+      "name":"lap",
+      "point":600,
+      "price":600,
+      "urlImage": "../assets/products/Electronics/lap.png"
+    },
+    {
+      "name":"phon",
+      "point":400,
+      "price":60,
+      "urlImage": "../assets/products/Electronics/phon.png"
+    },
+    {
+      "name":"printer",
+      "point":700,
+      "price":700,
+      "urlImage": "../assets/products/Electronics/printer.png"
+    },
+    {
+      "name":"Router",
+      "point":400,
+      "price":20,
+      "urlImage": "../assets/products/Electronics/rawter.png"
+    },
+    {
+      "name":"Scanner",
+      "point":900,
+      "price":500,
+      "urlImage": "../assets/products/Electronics/scaner.png"
+    },
+    {
+      "name":"screen",
+      "point":300,
+      "price":50,
+      "urlImage": "../assets/products/Electronics/screen.png"
+    },
+    {
+      "name":"speaker",
+      "point":103,
+      "price":15,
+      "urlImage": "../assets/products/Electronics/speaker.png"
+    },
+    {
+      "name":"tablet",
+      "point":300,
+      "price":60,
+      "urlImage": "../assets/products/Electronics/tablet.png"
+    }
+  ],
+  "oil":[
+    {
+        "name":"Oil bottle",
+      "point":100,
+      "price":12,
+      "urlImage": "../assets/products/oil/oil.jpg"
+    }
+  ]
+}
