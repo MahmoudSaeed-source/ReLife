@@ -70,3 +70,4 @@ function putElement(product) {
           </div>`;
 }
 // end get All product 
+// commment
