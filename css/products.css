@@ -1,7 +1,7 @@
 @import "./mainStyle.css";
 .categories {
   width: 100%;
-  height: 200px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,7 +60,6 @@
 .All_Products{
   width: 100%;
   height: auto;
-
   display: flex;
   padding: 20px 0px; 
   flex-wrap: wrap;

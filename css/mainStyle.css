@@ -485,7 +485,18 @@ main {
    stroke-dasharray: 125.6;
    transform: rotate(-90deg);
  }
-.payment_Systems h2 {
+ .title_section{
+  width: 100%;
+    height: 100px;
+    color: var(--main-font-color-title);
+    font-family: var(--title-font-family-Ar);
+    font-size: var(--title-font-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+ }
+.payment_Systems .title_section {
   width: 100%;
   height: 100px;
   color: var(--main-font-color-title);
