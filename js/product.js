@@ -14,7 +14,7 @@ let categories_Li = [];
   } catch(err) {
     console.log(err);
   }
-  return Put_Category(res);
+  return Put_Category(res),default_Product_display(res) ;
 }())
 //  end get data
 // start put category in dom 
@@ -31,17 +31,34 @@ function Put_Category(data) {
   get_All_Product_To_Dom(categories_Li,data);
 }
 // end put category in dom
+// start default category display 
+function default_Product_display(data) {
+  let electronic_category = data.الالكترونيات;
+  electronic_category.forEach((product) => {
+    putElement(product);
+  })  
+}
+default_Product_display();
+// end default category display 
 // start get All product 
 
 function get_All_Product_To_Dom(categories,data) {
   categories.forEach((category) => {
     category.addEventListener("click",(e) => {
+      e.stopPropagation();
       All_Products_Dom.innerHTML = "";
      let category_element = e.target.dataset.category;
      let products = data[category_element];
      console.log(products);
      products.forEach((product) => {
-       All_Products_Dom.innerHTML += `  <div class="product_Card">
+      putElement(product);
+     })
+   });
+ });
+}
+// put product in html
+function putElement(product) {
+   All_Products_Dom.innerHTML += `  <div class="product_Card">
             <div class="image_Container">
               <img src=${product.urlImage}>
             </div>
@@ -51,21 +68,5 @@ function get_All_Product_To_Dom(categories,data) {
               <span class="point">${product.point} نقطه</span>
             </div>
           </div>`;
-     })
-    //  products.forEach((single_Product) => {
-    //    All_Products_Dom += `  <div class="product_Card">
-    //         <div class="image_Container">
-    //           <img src=${single_Product.urlImage}>
-    //         </div>
-    //         <h4 class="name_Product">${single_Product.name}</h4>
-    //         <div class="price_Content">
-    //           <span class="price"> ${single_Product.price}</span>
-    //           <span class="point">${single_Product.point}</span>
-    //         </div>
-    //       </div>`;
-    //  })
-   });
- });
 }
-
 // end get All product 

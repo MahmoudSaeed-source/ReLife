@@ -157,6 +157,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 200000;
+  background-color: #fff;
 }
 .Links {
   width: 70%;
@@ -610,6 +611,7 @@ footer{
   display: flex;
   flex-direction:column;
   align-items: center;
+  justify-content: center;
 background-color: rgb(175, 213, 165);
 box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
@@ -649,7 +651,6 @@ padding-top: 20px;
 color:var(--main-font-color-title);
 font-size:25px;
 font-family: var(--title-font-family-Ar);
-  
 }
 .Links_ws li{
   width: 100%;
