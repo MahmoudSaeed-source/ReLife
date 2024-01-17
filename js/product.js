@@ -3,22 +3,21 @@ let categories_Icons_Container = document.querySelector(
   ".categories_Icons_Container"
 );
 let All_Products_Dom = document.querySelector(".All_Products .container .row");
+let Data = [];
 let categories_Li = [];
 let Btn_Add_To_Cart = [];
 let products_In_Cart = [];
+let products = [];
 
 //  start get data
 (async function getData() {
   let data = await axios.get("../data/products.json");
-  let res = [];
   try {
-    res = await data.data;
+    Data = await data.data;
   } catch (err) {
     console.log(err);
   }
-  return (
-    Put_Category(res), default_Product_display(res)
-  );;
+  return Put_Category(Data), default_Product_display(Data);;
 })();
 //  end get data
 // start put category in dom
@@ -48,13 +47,11 @@ default_Product_display();
 // start get All product
 
 function get_All_Product_To_Dom(categories,data) {
-  let products = [];
-  let category_element;
-  categories.forEach((category) => {
+    categories.forEach((category) => {
     category.addEventListener("click", (e) => {
       e.stopPropagation();
       All_Products_Dom.innerHTML = "";
-       category_element = e.target.dataset.category;
+       let  category_element = e.target.dataset.category;
        products = data[category_element];
     });
      products.forEach((product) => {
@@ -81,30 +78,26 @@ function putElement(product) {
             </div>
           </div>`;
   Btn_Add_To_Cart = document.querySelectorAll(".slid_show");
-  Add_To_cart(product);
+  add_To_Cart(Btn_Add_To_Cart);
 }
-<<<<<<< HEAD
 // end get All product
 // add to cart
-//loop فى مشكله فى اضافه العناصر لانه بيضيف اخر عنصر فقط بسب 
-// function Add_To_cart(product) {
-//   Btn_Add_To_Cart.forEach((Btn) => {
-//     Btn.addEventListener("click",() => {
-//       let Counter = document.querySelector(".count_In_Cart");
-//       let product_Add = products_In_Cart.find((pro) => pro.id === product.id)
-//       products_In_Cart.push({ ...product,quantity: 1 });
-//         Counter.innerHTML = products_In_Cart.length;
-//         console.log(products_In_Cart)
-   
-//        get_Product_Form_cart();
-//     });
-//   });
-// }
+function add_To_Cart(Btn) {
+  Btn.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      let product_Id = e.target.dataset.id;
+      // Convert Data object values to an array
+      let dataArray = Object.values(Data);
+      // Flatten the array (if necessary)
+      let productsArray = dataArray.flat();
+      let get_element = productsArray.find(
+        (product) => product.id === product_Id
+      );
+        products_In_Cart.push({ ...get_element,quantity: 1 });
+        console.log(products_In_Cart);
+    });
+  });
+}
+// end add_To_Cart
 
-// function get_Product_Form_cart() {
- 
-// }
-=======
-// end get All product 
-// commment
->>>>>>> 895a3bc4def69800a6927eaadcec56ede218b5d0
+
