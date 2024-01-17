@@ -1,31 +1,35 @@
 {
   "اوراق":[
     {
-      "name":"books",
+      "id":"1",
+      "name":"كتب",
       "point":100,
       "price":12,
       "urlImage": "../assets/products/paper/books.png"
     },
     {
-      "name":"blankPaper",
+      "id":"2",
+      "name":"اوراق فارغه",
       "point":80,
       "price":7,
       "urlImage": "../assets/products/paper/blankpaper.png"
     },
     {
-      "name":"cartoon",
+      "id":"3",
+      "name":"كرتون",
       "point":130,
       "price":30,
       "urlImage": "../assets/products/paper/cartoon.png"
     },
-    {
-      "nam":"magazine",
+    {"id":"4",
+      "name":"مجالات",
       "point":80,
       "price":20,
       "urlImage": "../assets/products/paper/magazine.png"
     },
     {
-      "name":"newspaper",
+      "id":"5",
+      "name":"جرائد",
       "point":80,
       "price":25,
       "urlImage": "../assets/products/paper/newspaper.png"
@@ -35,37 +39,42 @@
   "بلاستيك":[
     
      {
-      "name":"Plastic water bottle small",
+      "id":"6",
+      "name":"زجاجات مياه صغيره",
       "point":1,
       "price":0.10,
       "urlImage": "../assets/products/Plastic/small.jpg"
     },
     {
-      "name":"Plastic water bottle big",
+      "id":"8",
+      "name":"زجاجات مياه لتر",
       "point":2,
       "price":0.20,
       "urlImage": "../assets/products/Plastic/big.jpg"
     },
     {
-      "name":"Plastic water bottle large",
+      "id":"9",
+      "name":"زجاجات مياه كبيره",
       "point":5,
       "price":0.50,
       "urlImage": "../assets/products/Plastic/large.jpg"
     },
     {
-      "nam":"cher",
+      "id":"9",
+      "name":"كراسى بلاستيك",
       "point":10,
       "price":3,
       "urlImage": "../assets/products/Plastic/cher.png"
     },
-    {
-      "name":"some Plastic",
+    {"id":"10",
+      "name":"اطباق بلاستيك ",
       "point":5,
       "price":2,
       "urlImage": "../assets/products/Plastic/Ghk5ylX4gtpHQjax7M1n5dvGf1VZGXwKkKcWkVR1.png"
     },
     {
-      "name":"Drums",
+      "id":"11",
+      "name":"براميل",
       "point":10,
       "price":10,
       "urlImage": "../assets/products/Plastic/dW0WRAD5XbEgr2SYPWUEinXvQidnjYHdYtvJP6uJ.png"
@@ -74,74 +83,86 @@
   ],
   "الالكترونيات":[
      {
-      "name":"cpu",
+      "id":"12",
+      "name":"كيسه",
       "point":300,
       "price":70,
       "urlImage": "../assets/products/Electronics/cpu.png"
 
     },
     {
-      "name":"fan",
+      "id":"13",
+      "name":"مروحه كمبيوتر",
       "point":2,
       "price":3,
       "urlImage": "../assets/products/Electronics/fan.png"
     },
     {
-      "name":"hard",
+      "id":"14",
+      "name":"هارد ديسك",
       "point":80,
       "price":9,
       "urlImage": "../assets/products/Electronics/hard.png"
     },
     {
-      "nam":"ipod",
+      "id":"15",
+      "name":"ايباد",
       "point":130,
       "price":80,
       "urlImage": "../assets/products/Electronics/ipod.png"
     },
     {
-      "name":"lap",
+      "id":"16",
+      "name":"لاب توب",
       "point":600,
       "price":600,
       "urlImage": "../assets/products/Electronics/lap.png"
     },
     {
-      "name":"phon",
+      "id":"17",
+      "name":"هاتف",
       "point":400,
       "price":60,
       "urlImage": "../assets/products/Electronics/phon.png"
     },
     {
-      "name":"printer",
+      "id":"18",
+      "name":"طابعه",
       "point":700,
       "price":700,
       "urlImage": "../assets/products/Electronics/printer.png"
     },
     {
-      "name":"Router",
+      "id":"19",
+      "name":"رواتر",
       "point":400,
       "price":20,
       "urlImage": "../assets/products/Electronics/rawter.png"
     },
     {
-      "name":"Scanner",
+      "id":"20",
+      "name":"سكانر",
       "point":900,
       "price":500,
       "urlImage": "../assets/products/Electronics/scaner.png"
     },
     {
-      "name":"screen",
+      "id":"21",
+      "name":"شاشه كمبيوتر",
       "point":300,
       "price":50,
       "urlImage": "../assets/products/Electronics/screen.png"
     },
     {
-      "name":"speaker",
+      "id":"22",
+      "name":"سماعات خارجية",
       "point":103,
       "price":15,
       "urlImage": "../assets/products/Electronics/speaker.png"
     },
     {
-      "name":"tablet",
+      "id":"23",
+      "name":"تابليت",
       "point":300,
       "price":60,
       "urlImage": "../assets/products/Electronics/tablet.png"
@@ -149,7 +170,8 @@
   ],
   "زيتوت":[
     {
-        "name":"Oil bottle",
+      "id":"24",
+        "name":"زجاجات زيت مستعمل",
       "point":100,
       "price":12,
       "urlImage": "../assets/products/oil/oil.jpg"

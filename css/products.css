@@ -1,4 +1,15 @@
 @import "./mainStyle.css";
+.cart_Icon{
+  position: relative;
+}
+.count_In_Cart{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 20%;
+  color:green;
+}
 .categories {
   width: 100%;
   height: 300px;
@@ -80,6 +91,9 @@
   margin-right: 40px;
   margin-bottom: 20px;
   padding: 20px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
 }
 .product_Card .image_Container{
   width: 100%;
@@ -121,4 +135,43 @@ display: flex;
   font-size: 16px;
   font-family: var(--paragraph-font-family-Ar);
   color: var(--main-font-color-title);
+}
+.product_Card:hover>.sale_icon{
+  display: flex;
+}
+.sale_icon{
+  width: 100%;
+  height: 100%;
+background-color: transparent;
+  position: absolute;
+  top:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.sale_icon .slid_show{
+  width: 40%;
+  height: 20%;
+  background-color:#0f7507a1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  
+}
+.sale_icon i{
+  display: flex;
+  width: 60px ;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  color:#fff;
+  font-size: 25px;
+  cursor: pointer;
+  fill: #fff;
 }
