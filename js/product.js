@@ -83,6 +83,7 @@ function putElement(product) {
   Btn_Add_To_Cart = document.querySelectorAll(".slid_show");
   Add_To_cart(product);
 }
+<<<<<<< HEAD
 // end get All product
 // add to cart
 //loop فى مشكله فى اضافه العناصر لانه بيضيف اخر عنصر فقط بسب 
@@ -103,3 +104,7 @@ function putElement(product) {
 // function get_Product_Form_cart() {
  
 // }
+=======
+// end get All product 
+// commment
+>>>>>>> 895a3bc4def69800a6927eaadcec56ede218b5d0
