@@ -3,6 +3,10 @@ let categories_Icons_Container = document.querySelector(
   ".categories_Icons_Container"
 );
 let All_Products_Dom = document.querySelector(".All_Products .container .row");
+let count_In_Cart = document.querySelector(".count_In_Cart");
+let products_cart_content_Dom = document.querySelector(".products_cart") 
+let cart_content = document.querySelector(".cart_content");
+let cart_icon_svg = document.querySelector(".cart_icon_svg");
 let Data = [];
 let categories_Li = [];
 let Btn_Add_To_Cart = [];
@@ -84,7 +88,8 @@ function putElement(product) {
 // add to cart
 function add_To_Cart(Btn) {
   Btn.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener("click",(e) => {
+      console.log(e.target)
       let product_Id = e.target.dataset.id;
       // Convert Data object values to an array
       let dataArray = Object.values(Data);
@@ -93,11 +98,48 @@ function add_To_Cart(Btn) {
       let get_element = productsArray.find(
         (product) => product.id === product_Id
       );
-        products_In_Cart.push({ ...get_element,quantity: 1 });
-        console.log(products_In_Cart);
+      products_In_Cart.push({...get_element,quantity:1});
+      alert_nav_add_To_cart();
+      count_In_Cart.innerHTML = products_In_Cart.length;
+      display_Product_From_Cart_To_Dom();
+      console.log(products_In_Cart)
     });
   });
+ 
 }
 // end add_To_Cart
+function alert_nav_add_To_cart(){
+  Toastify({
+       text: "item added to cart",
+       className: "info",
+       gravity: "top", // `top` or `bottom`
+       position: "center",
+       style: {
+         background: "linear-gradient(to right, #00b09b, #96c93d)",
+         color: "white",
+       },
+     }).showToast();
+}
+
+function display_Product_From_Cart_To_Dom() {
+    products_cart_content_Dom.innerHTML = "";
+  products_In_Cart.forEach((product) => {
+  
+    products_cart_content_Dom.innerHTML += ` <li class="display_product">
+            <div class="remove">
+              <i class="fa-regular fa-trash-can"></i>
+            </div>
+            <div class="increment_decrement">
+              <span class="increment">+</span>
+              <span class="counter">${product.quantity}</span>
+              <span class="decrmrnt">-</span>
+            </div>
+            <h6 class="name_product">${product.name}</h6>
+            <div class="image_cart">
+              <img src=${product.urlImage}>
+            </div>
+          </li>`;
+  })
+}
 
 
