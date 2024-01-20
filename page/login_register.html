@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/all.min.css">
+  <link rel="stylesheet" href="../css/login_register.css"/>
+  <title> LOGIN  |  REGISTER </title>
+</head>
+<body>
+    <div class="container" id="container">
+      <div class="form-container sign-up">
+        <form class="form_Register">
+          <h1>انشاء حساب </h1>
+          <div class="social-icons">
+            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <span>سجل بالايميل </span>
+          <input type="text" placeholder="الاسم" name="user_name_register">
+          <input type="text" placeholder="الهاتف" name="phon_register">
+          <input type="email" placeholder="الايميل" name="email_register">
+          <input type="password" placeholder="كلمة السر" name="password_register" class="password_register">
+          <span class="password_syntax">worng</span>
+          <button type="submit">انشاء حساب</button>
+        </form>
+      </div>
+      <div class="form-container sign-in">
+        <form class="form_Sign_In">
+          <h1>تسجيل الدخول</h1>
+          <div class="social-icons">
+            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <span>سجل بالايميل</span>
+          <input type="email" placeholder="الايميل" name = "email_Sign_in" id="email_Sign_In">
+         
+          <input type="password" placeholder="كلمة السر" name = 'password_Sign_in' id="password_Sign_In">
+         
+          <a href="#">نسيت الباسورد؟</a>
+          <button type="submit" id="log_In_submit">تسجيل الدخول</button>
+        </form>
+      </div>
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>مرحبا بعودتك</h1>
+            <p>مرحبا بعودتك وشكرا على محافظتك على البيئه </p>
+            <button class="hidden" id="login">تسجيل الدخول</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>مرحبا بك!</h1>
+            <p>سجل معنا وحافظ على بيئه نظيفة وكمان اكسب معانا من خلال بيع مخلفاتك</p>
+            <button class="hidden" id="register">انشاء حساب جديد</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script src="../all.min.js"></script>
+  <script src="../js/login_Register.js"></script>
+</body>
+</html>

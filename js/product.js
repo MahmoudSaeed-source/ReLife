@@ -7,6 +7,10 @@ let count_In_Cart = document.querySelector(".count_In_Cart");
 let products_cart_content_Dom = document.querySelector(".products_cart") 
 let cart_content = document.querySelector(".cart_content");
 let cart_icon_svg = document.querySelector(".cart_icon_svg");
+let total_Price_Dom = document.querySelector(".total_Price");
+let Btn_increment = [];
+let Btn_decrement = [];
+let Btn_remove = [];
 let Data = [];
 let categories_Li = [];
 let Btn_Add_To_Cart = [];
@@ -35,14 +39,14 @@ function Put_Category(data) {
           </li>`;
   }
   categories_Li = document.querySelectorAll(".layer_text");
-  get_All_Product_To_Dom(categories_Li, data);
+  get_All_Product_To_Dom(categories_Li, Data);
 }
 // end put category in dom
 // start default category display
 function default_Product_display(data) {
   let electronic_category = data.الالكترونيات;
   electronic_category.forEach((product) => {
-    putElement(product);
+    DisplayProducts(product);
   });
 }
 default_Product_display();
@@ -50,22 +54,21 @@ default_Product_display();
 // end default category display
 // start get All product
 
-function get_All_Product_To_Dom(categories,data) {
-    categories.forEach((category) => {
-    category.addEventListener("click", (e) => {
-      e.stopPropagation();
-      All_Products_Dom.innerHTML = "";
-       let  category_element = e.target.dataset.category;
-       products = data[category_element];
+function get_All_Product_To_Dom(categoriesElement,data) {
+  categoriesElement.forEach((category) => {
+    category.addEventListener("click",(e) => {
+      let category_element = e.target.dataset.category;
+      products = data[category_element];
+       All_Products_Dom.innerHTML = "";
+      products.forEach((product) => {
+        DisplayProducts(product);
+      })
     });
-     products.forEach((product) => {
-       putElement(product);
-     });
   });
 }
-// put product in html
-
-function putElement(product) {
+// end get All product
+// start stander display products 
+function DisplayProducts(product) {
   All_Products_Dom.innerHTML += `  <div class="product_Card">
  <div class="sale_icon animate__animated animate__bounceInRight">
   <div class="slid_show "data-id= ${product.id}>
@@ -84,7 +87,8 @@ function putElement(product) {
   Btn_Add_To_Cart = document.querySelectorAll(".slid_show");
   add_To_Cart(Btn_Add_To_Cart);
 }
-// end get All product
+// end stander display products 
+
 // add to cart
 function add_To_Cart(Btn) {
   Btn.forEach((btn) => {
@@ -98,11 +102,22 @@ function add_To_Cart(Btn) {
       let get_element = productsArray.find(
         (product) => product.id === product_Id
       );
-      products_In_Cart.push({...get_element,quantity:1});
-      alert_nav_add_To_cart();
-      count_In_Cart.innerHTML = products_In_Cart.length;
-      display_Product_From_Cart_To_Dom();
-      console.log(products_In_Cart)
+       let existingProduct = products_In_Cart.find(
+         (ele) => ele.id === get_element.id
+       );
+
+       if (existingProduct) {
+         existingProduct.quantity++;
+       } else {
+         products_In_Cart.push({ ...get_element, quantity: 1 });
+         alert_nav_add_To_cart();
+       }
+
+       count_In_Cart.innerHTML = products_In_Cart.length;
+       console.log(products_In_Cart);
+       display_Product_From_Cart_To_Dom();
+        
+    
     });
   });
  
@@ -127,19 +142,64 @@ function display_Product_From_Cart_To_Dom() {
   
     products_cart_content_Dom.innerHTML += ` <li class="display_product">
             <div class="remove">
-              <i class="fa-regular fa-trash-can"></i>
+              <i class="remove_Icon fa-regular fa-trash-can"></i>
             </div>
             <div class="increment_decrement">
-              <span class="increment">+</span>
-              <span class="counter">${product.quantity}</span>
-              <span class="decrmrnt">-</span>
+              <span class="increment" >+</span>
+              <span class="counter" >${product.quantity}</span>
+              <span class="decrement ">-</span>
             </div>
+            <h6 class = "product_Price"> ${product.price * product.quantity} ج.م</h6>
             <h6 class="name_product">${product.name}</h6>
             <div class="image_cart">
               <img src=${product.urlImage}>
             </div>
           </li>`;
   })
+  Btn_increment = document.querySelectorAll(".increment");
+  Btn_decrement = document.querySelectorAll(".decrement");
+  Btn_remove = document.querySelectorAll(".remove_Icon ");
+  increment();
+  decrement();
+  remove_product();
+  total_Price();
 }
-
-
+// start increment 
+function increment() {
+  Btn_increment.forEach((Btn,index) => {
+    Btn.addEventListener('click',() => {
+      products_In_Cart[index].quantity++
+      display_Product_From_Cart_To_Dom();
+      total_Price();
+    })
+  })
+}
+// start increment 
+// start decrement 
+function decrement() {
+  Btn_decrement.forEach((Btn, index) => {
+    Btn.addEventListener("click",() => {
+      if(products_In_Cart[index].quantity > 1)  {
+        products_In_Cart[index].quantity--;
+        display_Product_From_Cart_To_Dom();
+        total_Price();
+      } 
+    });
+  });
+}
+// start decrement
+// start remove Element
+function remove_product() {
+ Btn_remove.forEach((Btn, index) => {
+   Btn.addEventListener("click",(e) => {
+     products_In_Cart.splice(index,1);
+     display_Product_From_Cart_To_Dom();
+     total_Price();
+   });
+ });
+}
+// end remove Element
+function total_Price() {
+  let total_price_count = products_In_Cart.reduce((current,item) => current + (item.price * item.quantity),0)
+  total_Price_Dom.innerHTML = `ج.م ${total_price_count}`;
+}

@@ -1,82 +1,4 @@
-:root {
-  --main-font-family-En: "Noto Serif JP", serif;
-  --title-font-family-Ar: "Changa", sans-serif;
-  --paragraph-font-family-Ar: "Cairo", sans-serif;
-  --btn-font-family-Ar: "Cairo", sans-serif;
-  --space-between-sections: 80px;
-  --main-font-color-title: #1a9c2a;
-  --main-btn-color: #194e02;
-  --paragraph-color: #58b119;
-  --btn-font-color-onhover: #7abd4c;
-  --main-btn-bg-color: #5cd235;
-  --hover-btn-bg-color: #7a9d54;
-  --title-font-size: 60px;
-  --paragraph-font-size: 22px;
-  --btn-font-size: 18px;
-  --btn-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-button {
-  width: 200px;
-  height: 40px;
-  margin-top: 60px;
-  padding: 20px;
-  z-index: 1;
-  position: relative;
-  padding: 0.5em 1em;
-  background-color: var(--hover-btn-bg-color);
-  overflow: hidden;
-  cursor: pointer;
-  font-size: var(--btn-font-size);
-  font-family: var(--btn-font-family-Ar);
-  background-color: var(--main-btn-bg-color);
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border: none;
-  outline: none;
-  padding: 10px;
-  color: var(--main-btn-color);
-  box-shadow: var(--btn-shadow);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 500;
-}
-button::after {
-  content: "";
-  z-index: -1;
-  background-color: var(--main-btn-color);
-  position: absolute;
-  top: -50%;
-  bottom: -50%;
-  width: 1.25em;
-  transform: translate3d(-525%, 0, 0) rotate(35deg);
-}
-button:hover::after {
-  transition: transform 0.45s ease-in-out;
-  transform: translate3d(580%, 0, 0) rotate(35deg);
-  -webkit-transform: translate3d(580%, 0, 0) rotate(35deg);
-  -moz-transform: translate3d(580%, 0, 0) rotate(35deg);
-  -ms-transform: translate3d(580%, 0, 0) rotate(35deg);
-  -o-transform: translate3d(580%, 0, 0) rotate(35deg);
-}
-a {
-  text-decoration: none;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--main-font-color-title) !important;
-}
+@import './root.css';
 body {
   width: 100%;
   height: auto;
@@ -87,21 +9,24 @@ body {
   width: 100%;
   height: auto;
 }
-.nav {
+nav{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
   width: 100%;
-  height: 150px;
-  display: flex;
-  flex-direction: row;
-  border: 2px solid yellow;
+  height: auto;
+  left: 0;
+  
 }
 
 /* start top  nav bar  */
 .top_Nav {
   width: 100%;
   max-width: 100%;
-  height: 40px;
+  height: 80px;
   display: flex;
-  z-index: 10000000;
+
 }
 .user,
 .social_Icons,
@@ -156,10 +81,8 @@ body {
   align-items: center;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  position: sticky;
-  top: 40;
-  z-index: 200000;
-  background-color: #fff;
+  z-index: 200;
+  margin-bottom: 40px;
 }
 .Links {
   width: 70%;
