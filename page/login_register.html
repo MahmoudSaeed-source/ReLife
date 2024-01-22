@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <link rel="stylesheet" href="../css/all.min.css">
   <link rel="stylesheet" href="../css/login_register.css"/>
   <title> LOGIN  |  REGISTER </title>
@@ -19,11 +20,18 @@
             <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
           </div>
           <span>سجل بالايميل </span>
-          <input type="text" placeholder="الاسم" name="user_name_register">
-          <input type="text" placeholder="الهاتف" name="phon_register">
-          <input type="email" placeholder="الايميل" name="email_register">
-          <input type="password" placeholder="كلمة السر" name="password_register" class="password_register">
-          <span class="password_syntax">worng</span>
+          <input class=" user_Name_register" type="text" placeholder="الاسم" name="user_name">
+          <span class="validation_Error user_Name_validition"></span>
+          <input class="phon_number" type="text" placeholder="الهاتف" name="phon">
+          <span class="validation_Error phon_number_validition">
+            يجب ان يكون رقم الهاتف مكون من 11 رقم ويبدا 01
+          </span>
+          <input class="email_Register" type="email" placeholder="الايميل" name="email">
+          <span class="validation_Error email_Registe_validition">
+            يجب ان يحتوى الايميل على علامه @ وبعدها حروف انجليزية وبعدها . وبعدها حروف انجليزية
+          </span>
+          <input  class="password_register" type="password" placeholder="كلمة السر" name="password" >
+          <span class="validation_Error password_register_validition"> يجب ان تحتوى كلمة السر على  حرف انجليزى كبير وحرف انجليزى صغير وارقام وان لايقل عن 8 </span>
           <button type="submit">انشاء حساب</button>
         </form>
       </div>
@@ -60,7 +68,8 @@
         </div>
       </div>
     </div>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="../all.min.js"></script>
-  <script src="../js/login_Register.js"></script>
+  <script type='module' src="../js/login_Register.js"></script>
 </body>
 </html>

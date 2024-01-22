@@ -3,22 +3,14 @@ body {
   width: 100%;
   height: auto;
   font-family: var(--btn-font-family-Ar);
-  position: relative;
+  
 }
 .header {
   width: 100%;
   height: auto;
+  position: relative;
 }
-nav{
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #fff;
-  width: 100%;
-  height: auto;
-  left: 0;
-  
-}
+
 
 /* start top  nav bar  */
 .top_Nav {
@@ -83,6 +75,9 @@ nav{
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   z-index: 200;
   margin-bottom: 40px;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 .Links {
   width: 70%;
@@ -101,8 +96,14 @@ nav{
   justify-content: center;
   margin-left: 10px;
 }
-.Links li a:hover {
-  color: var(--main-btn-bg-color);
+.Links li:hover a {
+  /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
+  border-bottom:2px solid var(--hover-btn-bg-color) !important;
+  border-radius:10px ;
+  -webkit-border-radius:10px ;
+  -moz-border-radius:10px ;
+  -ms-border-radius:10px ;
+  -o-border-radius:10px ;
 }
 
 .logo {

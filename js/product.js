@@ -28,6 +28,18 @@ let products = [];
   return Put_Category(Data), default_Product_display(Data);;
 })();
 //  end get data
+// start add and remove class active from cart
+cart_icon_svg.addEventListener('click',() => {
+  cart_content.classList.toggle("active");
+})
+// start add and remove class active from cart
+window.addEventListener('scroll',() => {
+  if(window.scrollY > 100) {
+    cart_content.style.top = 0;
+  } else {
+     cart_content.style.top = '141px';
+  }
+})
 // start put category in dom
 function Put_Category(data) {
   for (let category in data) {
@@ -125,7 +137,7 @@ function add_To_Cart(Btn) {
 // end add_To_Cart
 function alert_nav_add_To_cart(){
   Toastify({
-       text: "item added to cart",
+       text: "تم اضافة المنتج الى العربه",
        className: "info",
        gravity: "top", // `top` or `bottom`
        position: "center",
@@ -195,6 +207,7 @@ function remove_product() {
      products_In_Cart.splice(index,1);
      display_Product_From_Cart_To_Dom();
      total_Price();
+      count_In_Cart.innerHTML = products_In_Cart.length;
    });
  });
 }
