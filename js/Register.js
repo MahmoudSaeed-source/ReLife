@@ -1,4 +1,6 @@
 import axios from "axios";
+import {alert_Register_Don} from './alerts'
+import { email_Register_Before } from "./alerts";
 const container = document.getElementById("container");
 const registerBtn = document.getElementById("register");
 const loginBtn = document.getElementById("login");
@@ -15,7 +17,7 @@ const emailRegex = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/;
 const egyptianPhoneNumberRegex = /^01[0-9]{9}$/;
 
 
-
+// ########################### start register_section  functions #########################
 // start chang form element Dom
 registerBtn.addEventListener("click", () => {
   container.classList.add("active");
@@ -44,21 +46,51 @@ form_Register.addEventListener("submit", (e) => {
   let password_Valid = password_register.value.match(password_regex);
   let phon_number_Valid = phon_number.value.match(egyptianPhoneNumberRegex);
   let email_valid = email_Register.value.match(emailRegex);
-  
+  console.log(formDataObject);
   if (!password_Valid) {
     password_register.nextElementSibling.style.display = "flex";
   }
+
+
   if (!phon_number_Valid) {
     phon_number.nextElementSibling.style.display = "flex";
   }
+
+
   if (!email_valid) {
     email_Register.nextElementSibling.style.display = "flex";
-  }
-  if(password_Valid && phon_number_Valid && email_valid) {
+  } 
+
+
+   checkEmail(formDataObject,formDataObject,password_Valid,phon_number_Valid,email_valid,);
+});
+// end form_Register
+
+
+// start check if email address register before
+
+async function checkEmail(form_User_Data,formDataObject,
+password_Valid,
+phon_number_Valid,
+email_valid,) {
+  let all_Users = await axios.get("http://localhost:3000/users");
+  try {
+    let users = await all_Users.data;
+    let find_User = users.find((user) => user.info.email === form_User_Data.email)
+    
+
+    if(find_User) {
+      email_Register_Before();
+       setTimeout(() => {
+         window.location.replace("../page/login_register.html");
+         window.history.replaceState({}, document.title, window.location.href);
+       }, 2000);
+    } else {
+      if (password_Valid && phon_number_Valid && email_valid) {
         axios.post("http://localhost:3000/users", {
-          ifo: formDataObject,
+          info: formDataObject,
           msg: {},
-          status_user: { is_Login: true, token: createToken(32) },
+          status_user: { is_Login: false, token: "" },
           Operations: {},
           Default_payment_status: {
             cash: true,
@@ -68,64 +100,18 @@ form_Register.addEventListener("submit", (e) => {
           },
           coins: 0,
         });
-    
-    alert_Register_Don();
-    
-    setTimeout(() => {
-       window.location.replace("../page/login_register.html");
-       window.history.replaceState({}, document.title, window.location.href);
-    },2000)
-   
-    } 
-   checkEmail(formDataObject);
-});
-// end form_Register
 
+        alert_Register_Don();
 
-
-// start alert register done
-function alert_Register_Don() {
-  Toastify({
-    text: "تم انشاء الحساب ",
-    className: "info",
-    gravity: "top", // `top` or `bottom`
-    position: "center",
-    style: {
-      background: "linear-gradient(to right, #00b09b, #96c93d)",
-      color: "white",
-    },
-  }).showToast();
-}
-// end alert register done
-
-
-
-// start create token 
-function createToken(length) {
-  const charset =
-    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-  let token = "";
-
-  for (let i = 0; i < length; i++) {
-    let randomIndex = Math.floor(Math.random() * charset.length);
-    token += charset[randomIndex];
-  }
-
-  return token;
-}
-// end create token
-
-// start check if email address register before
-
-async function checkEmail(form_User_Data) {
-  let all_Users = await axios.get("http://localhost:3000/users");
-  try {
-    let users = await all_Users.data;
-    let find_User = users.find((user) => user.ifo.email === form_User_Data.email)
-    if(find_User) {
-      console.log('yes')
-    } else {
-       console.log("no");
+        setTimeout(() => {
+          window.location.replace("../page/login_register.html");
+          window.history.replaceState({}, document.title, window.location.href);
+        },2000);
+        user_Name_register.value = "";
+        phon_number.value = "";
+        email_Register.value = "";
+        password_register.value = "";
+      } 
     }
   } catch(err) {
     console.log(err)
@@ -133,4 +119,14 @@ async function checkEmail(form_User_Data) {
  
 }
 // end check if email address register before
+
+
+// ########################### end register_section  functions #########################
+
+
+
+
+
+
+
 
