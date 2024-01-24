@@ -1,6 +1,6 @@
 import axios from "axios";
-import {alert_Register_Don} from './alerts'
-import { email_Register_Before } from "./alerts";
+import { alert_Register_Don } from "./notification";
+import { email_Register_Before } from "./notification";
 const container = document.getElementById("container");
 const registerBtn = document.getElementById("register");
 const loginBtn = document.getElementById("login");
@@ -89,9 +89,9 @@ email_valid,) {
       if (password_Valid && phon_number_Valid && email_valid) {
         axios.post("http://localhost:3000/users", {
           info: formDataObject,
-          msg: {},
+          msg: [],
           status_user: { is_Login: false, token: "" },
-          Operations: {},
+          Operations: [],
           Default_payment_status: {
             cash: true,
             Electronic_wallet: false,
@@ -100,9 +100,7 @@ email_valid,) {
           },
           coins: 0,
         });
-
         alert_Register_Don();
-
         setTimeout(() => {
           window.location.replace("../page/login_register.html");
           window.history.replaceState({}, document.title, window.location.href);

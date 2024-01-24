@@ -7,12 +7,12 @@
         "email": "ms2481988@gmail.com",
         "password": "Mm123456"
       },
-      "msg": {},
+      "msg": [],
       "status_user": {
         "is_Login": false,
         "token": ""
       },
-      "Operations": {},
+      "Operations": [],
       "Default_payment_status": {
         "cash": true,
         "Electronic_wallet": false,
@@ -21,50 +21,6 @@
       },
       "coins": 0,
       "id": 1
-    },
-    {
-      "info": {
-        "user_name": "amed",
-        "phon": "01010978392",
-        "email": "mahmoudsaid.wd@gmail.com",
-        "password": "Mm123456"
-      },
-      "msg": {},
-      "status_user": {
-        "is_Login": false,
-        "token": ""
-      },
-      "Operations": {},
-      "Default_payment_status": {
-        "cash": true,
-        "Electronic_wallet": false,
-        "donation": false,
-        "points": false
-      },
-      "coins": 0,
-      "id": 2
-    },
-    {
-      "info": {
-        "user_name": "mona",
-        "phon": "01000435643",
-        "email": "mm@gmail.com",
-        "password": "Mm123456"
-      },
-      "msg": {},
-      "status_user": {
-        "is_Login": false,
-        "token": ""
-      },
-      "Operations": {},
-      "Default_payment_status": {
-        "cash": true,
-        "Electronic_wallet": false,
-        "donation": false,
-        "points": false
-      },
-      "coins": 0,
-      "id": 3
     }
   ]
 }
