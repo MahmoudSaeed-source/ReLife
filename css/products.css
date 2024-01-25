@@ -20,7 +20,7 @@
 }
 .cart_content{
   width: 40%;
-  height: 100vh;
+  height: 80vh;
    max-height: 100vh;
    overflow: hidden;
     position: fixed;
@@ -35,7 +35,7 @@
 }
 .products_cart{
   width: 100%;
-  height: 85vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -44,17 +44,44 @@
 }
 .total_Price_content{
    width: 100%;
-  height: 15vh;
+  height: 10vh;
   display: flex;
- justify-content: center;
+ justify-content: space-between;
  align-items: center;
- font-size: 30px;
+ font-size: 18px;
  font-family: var(--paragraph-font-family-Ar);
  color: var(--main-font-color-title);
 box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+padding: 20px;
 }
-.total_Price_content h4{
-  margin-right: 20px;
+.total_Price_content div{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.total_Price_content div span{
+  margin-right: 10px;
+}
+.mony,.coins{
+  font-size: 16px;
+}
+.coins{
+  color:gold
+}
+.text_Price{
+  font-size: 16px;
+}
+.contain_payment{
+  width: 100%;
+  height: 10vh;
+  
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+  color:var(--main-btn-color)
 }
 .display_product{
   display: flex;

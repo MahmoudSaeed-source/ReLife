@@ -3,34 +3,34 @@
     {
       "id":"1",
       "name":"كتب",
-      "point":100,
+      "coins":100,
       "price":12,
       "urlImage": "../assets/products/paper/books.png"
     },
     {
       "id":"2",
       "name":"اوراق فارغه",
-      "point":80,
+      "coins":80,
       "price":7,
       "urlImage": "../assets/products/paper/blankpaper.png"
     },
     {
       "id":"3",
       "name":"كرتون",
-      "point":130,
+      "coins":130,
       "price":30,
       "urlImage": "../assets/products/paper/cartoon.png"
     },
     {"id":"4",
       "name":"مجالات",
-      "point":80,
+      "coins":80,
       "price":20,
       "urlImage": "../assets/products/paper/magazine.png"
     },
     {
       "id":"5",
       "name":"جرائد",
-      "point":80,
+      "coins":80,
       "price":25,
       "urlImage": "../assets/products/paper/newspaper.png"
     }
@@ -41,41 +41,41 @@
      {
       "id":"6",
       "name":"زجاجات مياه صغيره",
-      "point":1,
+      "coins":1,
       "price":0.10,
       "urlImage": "../assets/products/Plastic/small.jpg"
     },
     {
       "id":"8",
       "name":"زجاجات مياه لتر",
-      "point":2,
+      "coins":2,
       "price":0.20,
       "urlImage": "../assets/products/Plastic/big.jpg"
     },
     {
       "id":"9",
       "name":"زجاجات مياه كبيره",
-      "point":5,
+      "coins":5,
       "price":0.50,
       "urlImage": "../assets/products/Plastic/large.jpg"
     },
     {
       "id":"9",
       "name":"كراسى بلاستيك",
-      "point":10,
+      "coins":10,
       "price":3,
       "urlImage": "../assets/products/Plastic/cher.png"
     },
     {"id":"10",
       "name":"اطباق بلاستيك ",
-      "point":5,
+      "coins":5,
       "price":2,
       "urlImage": "../assets/products/Plastic/Ghk5ylX4gtpHQjax7M1n5dvGf1VZGXwKkKcWkVR1.png"
     },
     {
       "id":"11",
       "name":"براميل",
-      "point":10,
+      "coins":10,
       "price":10,
       "urlImage": "../assets/products/Plastic/dW0WRAD5XbEgr2SYPWUEinXvQidnjYHdYtvJP6uJ.png"
     }
@@ -85,7 +85,7 @@
      {
       "id":"12",
       "name":"كيسه",
-      "point":300,
+      "coins":300,
       "price":70,
       "urlImage": "../assets/products/Electronics/cpu.png"
 
@@ -93,77 +93,77 @@
     {
       "id":"13",
       "name":"مروحه كمبيوتر",
-      "point":2,
+      "coins":2,
       "price":3,
       "urlImage": "../assets/products/Electronics/fan.png"
     },
     {
       "id":"14",
       "name":"هارد ديسك",
-      "point":80,
+      "coins":80,
       "price":9,
       "urlImage": "../assets/products/Electronics/hard.png"
     },
     {
       "id":"15",
       "name":"ايباد",
-      "point":130,
+      "coins":130,
       "price":80,
       "urlImage": "../assets/products/Electronics/ipod.png"
     },
     {
       "id":"16",
       "name":"لاب توب",
-      "point":600,
+      "coins":600,
       "price":600,
       "urlImage": "../assets/products/Electronics/lap.png"
     },
     {
       "id":"17",
       "name":"هاتف",
-      "point":400,
+      "coins":400,
       "price":60,
       "urlImage": "../assets/products/Electronics/phon.png"
     },
     {
       "id":"18",
       "name":"طابعه",
-      "point":700,
+      "coins":700,
       "price":700,
       "urlImage": "../assets/products/Electronics/printer.png"
     },
     {
       "id":"19",
       "name":"رواتر",
-      "point":400,
+      "coins":400,
       "price":20,
       "urlImage": "../assets/products/Electronics/rawter.png"
     },
     {
       "id":"20",
       "name":"سكانر",
-      "point":900,
+      "coins":900,
       "price":500,
       "urlImage": "../assets/products/Electronics/scaner.png"
     },
     {
       "id":"21",
       "name":"شاشه كمبيوتر",
-      "point":300,
+      "coins":300,
       "price":50,
       "urlImage": "../assets/products/Electronics/screen.png"
     },
     {
       "id":"22",
       "name":"سماعات خارجية",
-      "point":103,
+      "coins":103,
       "price":15,
       "urlImage": "../assets/products/Electronics/speaker.png"
     },
     {
       "id":"23",
       "name":"تابليت",
-      "point":300,
+      "coins":300,
       "price":60,
       "urlImage": "../assets/products/Electronics/tablet.png"
     }
@@ -172,7 +172,7 @@
     {
       "id":"24",
         "name":"زجاجات زيت مستعمل",
-      "point":100,
+      "coins":100,
       "price":12,
       "urlImage": "../assets/products/oil/oil.jpg"
     }

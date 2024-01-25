@@ -7,7 +7,11 @@ let count_In_Cart = document.querySelector(".count_In_Cart");
 let products_cart_content_Dom = document.querySelector(".products_cart") 
 let cart_content = document.querySelector(".cart_content");
 let cart_icon_svg = document.querySelector(".cart_icon_svg");
-let total_Price_Dom = document.querySelector(".total_Price");
+let total_Price_Dom = document.querySelector(".mony");
+let total_Coins = document.querySelector(".coins");
+let contain_payment = document.querySelector(".contain_payment");
+console.log(contain_payment);
+
 let Btn_increment = [];
 let Btn_decrement = [];
 let Btn_remove = [];
@@ -34,8 +38,9 @@ cart_icon_svg.addEventListener('click',() => {
 })
 // start add and remove class active from cart
 window.addEventListener('scroll',() => {
-  if(window.scrollY > 100) {
+  if(window.scrollY > 80) {
     cart_content.style.top = 0;
+    cart_content.style.height = '100vh'
   } else {
      cart_content.style.top = '141px';
   }
@@ -105,7 +110,7 @@ function DisplayProducts(product) {
 function add_To_Cart(Btn) {
   Btn.forEach((btn) => {
     btn.addEventListener("click",(e) => {
-      console.log(e.target)
+
       let product_Id = e.target.dataset.id;
       // Convert Data object values to an array
       let dataArray = Object.values(Data);
@@ -121,7 +126,7 @@ function add_To_Cart(Btn) {
        if (existingProduct) {
          existingProduct.quantity++;
        } else {
-         products_In_Cart.push({ ...get_element, quantity: 1 });
+         products_In_Cart.push({ ...get_element,quantity: 1 });
          alert_nav_add_To_cart();
        }
 
@@ -212,7 +217,23 @@ function remove_product() {
  });
 }
 // end remove Element
+//start  contain payment process
+if(products_In_Cart.length > 0) {
+  contain_payment.innerHTML = " استكمال عملية البيع";
+  console.log(products_In_Cart.length);
+} else {
+  contain_payment.innerHTML = "";
+  console.log(products_In_Cart);
+}
+
+//end  contain payment process
+// start price function 
 function total_Price() {
   let total_price_count = products_In_Cart.reduce((current,item) => current + (item.price * item.quantity),0)
-  total_Price_Dom.innerHTML = `ج.م ${total_price_count}`;
+  let total_Coins_count = products_In_Cart.reduce(
+    (current, item) => current + (item.coins * item.quantity),
+    0
+  );
+  total_Price_Dom.innerHTML = `${total_price_count} ج.م `;
+  total_Coins.innerHTML = `${total_Coins_count} عمله `;
 }
