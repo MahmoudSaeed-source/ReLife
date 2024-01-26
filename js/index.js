@@ -1,9 +1,10 @@
 import axios from "axios";
-import {user_sign_out} from './notification'
-  let get_Token = localStorage.getItem("token");
-let user_Section = document.querySelector('.user');
- get_User_login();
-function get_User_login() {
+import { user_sign_out } from './notification'
+
+export  let get_Token = localStorage.getItem("token");
+get_User_login();
+export function get_User_login() {
+  let user_Section = document.querySelector('.user');
   if(get_Token) {
     axios.get("http://localhost:3000/users").then((res) => {
       let users = res.data;
@@ -11,7 +12,7 @@ function get_User_login() {
       users.forEach(user => {   
        if (user.status_user.token === get_Token) {
           user_Section.innerHTML = `<div class="image_container_user">
-              <img src="./assets/logo/user.png " alt="user" class="user_img">
+              <img src="/assets/logo/user.png " alt="user" class="user_img">
             </div>
             <span class="user_name_login">${user.info.user_name}</span>
             <div class="coins_section">
@@ -30,7 +31,7 @@ function get_User_login() {
               `;
        } else {
           user_Section.innerHTML = `  <i class="fa-regular fa-user"></i>
-              <span><a href="./page/login_register.html">تسجيل الدخول</a></span>`;
+              <span><a href="../page/login_register.html">تسجيل الدخول</a></span>`;
        }
       
       });
@@ -48,12 +49,12 @@ function get_User_login() {
    
   } else {
      user_Section.innerHTML = `  <i class="fa-regular fa-user"></i>
-              <span><a href="./page/login_register.html">تسجيل الدخول</a></span>`;
+              <span><a href="../page/login_register.html">تسجيل الدخول</a></span>`;
   }
 }
 
 
-function sign_out(Btn_sign_out, get_Token) {
+export function sign_out(Btn_sign_out, get_Token) {
   Btn_sign_out.addEventListener("click",(e) => {
     axios.get('http://localhost:3000/users').then((data) => {
       let users = data.data

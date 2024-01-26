@@ -3,36 +3,41 @@
     {
       "id":"1",
       "name":"كتب",
-      "coins":100,
-      "price":12,
-      "urlImage": "../assets/products/paper/books.png"
+      "coins":1000,
+      "price":100,
+      "urlImage": "../assets/products/paper/books.png",
+      "weights":"كيلو"
     },
     {
       "id":"2",
       "name":"اوراق فارغه",
-      "coins":80,
-      "price":7,
-      "urlImage": "../assets/products/paper/blankpaper.png"
+      "coins":800,
+      "price":80,
+      "urlImage": "../assets/products/paper/blankpaper.png",
+      "weights":"كيلو"
     },
     {
       "id":"3",
       "name":"كرتون",
-      "coins":130,
-      "price":30,
-      "urlImage": "../assets/products/paper/cartoon.png"
+      "coins":1600,
+      "price":160,
+      "urlImage": "../assets/products/paper/cartoon.png",
+      "weights":"كيلو"
     },
     {"id":"4",
       "name":"مجالات",
-      "coins":80,
-      "price":20,
-      "urlImage": "../assets/products/paper/magazine.png"
+      "coins":1300,
+      "price":130,
+      "urlImage": "../assets/products/paper/magazine.png",
+      "weights":"كيلو"
     },
     {
       "id":"5",
       "name":"جرائد",
-      "coins":80,
-      "price":25,
-      "urlImage": "../assets/products/paper/newspaper.png"
+      "coins":800,
+      "price":8,
+      "urlImage": "../assets/products/paper/newspaper.png",
+      "weight":"كيلو"
     }
 
   ],
@@ -41,43 +46,49 @@
      {
       "id":"6",
       "name":"زجاجات مياه صغيره",
-      "coins":1,
-      "price":0.10,
-      "urlImage": "../assets/products/Plastic/small.jpg"
+      "coins":5,
+      "price":0.50,
+      "urlImage": "../assets/products/Plastic/small.jpg",
+      "weights":"القطعه"
     },
     {
       "id":"8",
       "name":"زجاجات مياه لتر",
-      "coins":2,
-      "price":0.20,
-      "urlImage": "../assets/products/Plastic/big.jpg"
+      "coins":10,
+      "price":1,
+      "urlImage": "../assets/products/Plastic/big.jpg",
+      "weights":"القطعه"
     },
     {
       "id":"9",
       "name":"زجاجات مياه كبيره",
-      "coins":5,
-      "price":0.50,
-      "urlImage": "../assets/products/Plastic/large.jpg"
+      "coins":50,
+      "price":5,
+      "urlImage": "../assets/products/Plastic/large.jpg",
+      "weights":"القطعه"
     },
     {
       "id":"9",
       "name":"كراسى بلاستيك",
-      "coins":10,
-      "price":3,
-      "urlImage": "../assets/products/Plastic/cher.png"
+      "coins":300,
+      "price":30,
+      "urlImage": "../assets/products/Plastic/cher.png",
+      "weights":"القطعه"
     },
     {"id":"10",
       "name":"اطباق بلاستيك ",
-      "coins":5,
-      "price":2,
-      "urlImage": "../assets/products/Plastic/Ghk5ylX4gtpHQjax7M1n5dvGf1VZGXwKkKcWkVR1.png"
+      "coins":1800,
+      "price":180,
+      "urlImage": "../assets/products/Plastic/Ghk5ylX4gtpHQjax7M1n5dvGf1VZGXwKkKcWkVR1.png",
+      "weights":"كيلو"
     },
     {
       "id":"11",
       "name":"براميل",
-      "coins":10,
-      "price":10,
-      "urlImage": "../assets/products/Plastic/dW0WRAD5XbEgr2SYPWUEinXvQidnjYHdYtvJP6uJ.png"
+      "coins":400,
+      "price":40,
+      "urlImage": "../assets/products/Plastic/dW0WRAD5XbEgr2SYPWUEinXvQidnjYHdYtvJP6uJ.png",
+      "weights":"القطعه"
     }
 
   ],
@@ -85,96 +96,109 @@
      {
       "id":"12",
       "name":"كيسه",
-      "coins":300,
-      "price":70,
-      "urlImage": "../assets/products/Electronics/cpu.png"
+      "coins":800,
+      "price":80,
+      "urlImage": "../assets/products/Electronics/cpu.png",
+      "weights":"القطعه"
 
     },
     {
       "id":"13",
       "name":"مروحه كمبيوتر",
-      "coins":2,
-      "price":3,
-      "urlImage": "../assets/products/Electronics/fan.png"
+      "coins":10,
+      "price":1,
+      "urlImage": "../assets/products/Electronics/fan.png",
+       "weights":"القطعه"
     },
     {
       "id":"14",
       "name":"هارد ديسك",
-      "coins":80,
-      "price":9,
-      "urlImage": "../assets/products/Electronics/hard.png"
+      "coins":300,
+      "price":30,
+      "urlImage": "../assets/products/Electronics/hard.png",
+      "weights":"القطعه"
     },
     {
       "id":"15",
       "name":"ايباد",
-      "coins":130,
-      "price":80,
-      "urlImage": "../assets/products/Electronics/ipod.png"
+      "coins":2000,
+      "price":200,
+      "urlImage": "../assets/products/Electronics/ipod.png",
+      "weights":"القطعه"
     },
     {
       "id":"16",
       "name":"لاب توب",
-      "coins":600,
-      "price":600,
-      "urlImage": "../assets/products/Electronics/lap.png"
+      "coins":7000,
+      "price":700,
+      "urlImage": "../assets/products/Electronics/lap.png",
+       "weights":"القطعه"
     },
     {
       "id":"17",
       "name":"هاتف",
-      "coins":400,
-      "price":60,
-      "urlImage": "../assets/products/Electronics/phon.png"
+      "coins":2000,
+      "price":200,
+      "urlImage": "../assets/products/Electronics/phon.png",
+      "weights":"القطعه"
     },
     {
       "id":"18",
       "name":"طابعه",
-      "coins":700,
-      "price":700,
-      "urlImage": "../assets/products/Electronics/printer.png"
+      "coins":3500,
+      "price":350,
+      "urlImage": "../assets/products/Electronics/printer.png",
+      "weights":"القطعه"
     },
     {
       "id":"19",
       "name":"رواتر",
-      "coins":400,
-      "price":20,
-      "urlImage": "../assets/products/Electronics/rawter.png"
+      "coins":500,
+      "price":50,
+      "urlImage": "../assets/products/Electronics/rawter.png",
+      "weights":"القطعه"
     },
     {
       "id":"20",
       "name":"سكانر",
-      "coins":900,
-      "price":500,
-      "urlImage": "../assets/products/Electronics/scaner.png"
+      "coins":3000,
+      "price":300,
+      "urlImage": "../assets/products/Electronics/scaner.png",
+      "weights":"القطعه"
     },
     {
       "id":"21",
       "name":"شاشه كمبيوتر",
-      "coins":300,
-      "price":50,
-      "urlImage": "../assets/products/Electronics/screen.png"
+      "coins":3000,
+      "price":300,
+      "urlImage": "../assets/products/Electronics/screen.png",
+      "weights":"القطعه"
     },
     {
       "id":"22",
       "name":"سماعات خارجية",
-      "coins":103,
-      "price":15,
-      "urlImage": "../assets/products/Electronics/speaker.png"
+      "coins":300,
+      "price":30,
+      "urlImage": "../assets/products/Electronics/speaker.png",
+      "weights":"القطعه"
     },
     {
       "id":"23",
       "name":"تابليت",
-      "coins":300,
-      "price":60,
-      "urlImage": "../assets/products/Electronics/tablet.png"
+      "coins":1800,
+      "price":180,
+      "urlImage": "../assets/products/Electronics/tablet.png",
+      "weights":"القطعه"
     }
   ],
   "زيتوت":[
     {
       "id":"24",
         "name":"زجاجات زيت مستعمل",
-      "coins":100,
-      "price":12,
-      "urlImage": "../assets/products/oil/oil.jpg"
+      "coins":500,
+      "price":50,
+      "urlImage": "../assets/products/oil/oil.jpg",
+      "weights":"لتر"
     }
   ]
 }

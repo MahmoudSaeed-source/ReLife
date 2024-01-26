@@ -12,6 +12,21 @@ export function alert_Register_Don() {
   }).showToast();
 }
 // end alert_Register_Done
+// start add to cart done
+export function alert_nav_add_To_cart() {
+  Toastify({
+    text: "تم اضافة المنتج الى العربه",
+    className: "info",
+    gravity: "top", // `top` or `bottom`
+    position: "center",
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+      color: "white",
+    },
+  }).showToast();
+}
+// end add to cart done
+
 
 // start email_Register_Before
 export function email_Register_Before() {
