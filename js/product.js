@@ -158,18 +158,32 @@ function add_To_Cart(Btn) {
 }
 // end add_To_Cart
 
-function display_Product_From_Cart_To_Dom() {
-
-  if(products_In_Cart.length < 1) {
+ function display_Product_From_Cart_To_Dom() {
+  if (products_In_Cart.length < 1) {
     products_cart_content_Dom.innerHTML = `<h2 class="no_Products">لا توجد منتجات فى العربه</h2>`;
     total_Price_content.classList.remove("active");
     contain_payment.classList.remove("active");
   } else {
     products_cart_content_Dom.innerHTML = "";
-    total_Price_content.classList.add('active');
-    contain_payment.classList.add('active');
-    products_In_Cart.forEach((product) => {
-      products_cart_content_Dom.innerHTML += ` <li class="display_product">
+    total_Price_content.classList.add("active");
+    contain_payment.classList.add("active");
+    display_content_Html_tags(products_cart_content_Dom, products_In_Cart);
+  
+  }
+ 
+  Btn_increment = document.querySelectorAll(".increment");
+  Btn_decrement = document.querySelectorAll(".decrement");
+  Btn_remove = document.querySelectorAll(".remove_Icon ");
+  increment();
+  decrement();
+  remove_product();
+  total_Price();
+}
+
+ // start display_content_Html_tags
+  function display_content_Html_tags(element,data_products) {
+     data_products.forEach((product) => {
+       element.innerHTML += ` <li class="display_product">
             <div class="remove">
               <i class="remove_Icon fa-regular fa-trash-can"></i>
             </div>
@@ -186,17 +200,9 @@ function display_Product_From_Cart_To_Dom() {
               <img src=${product.urlImage}>
             </div>
           </li>`;
-    });
+     });
   }
-  
-  Btn_increment = document.querySelectorAll(".increment");
-  Btn_decrement = document.querySelectorAll(".decrement");
-  Btn_remove = document.querySelectorAll(".remove_Icon ");
-  increment();
-  decrement();
-  remove_product();
-  total_Price();
-}
+// end display_content_Html_tags
 // start increment 
 function increment() {
   Btn_increment.forEach((Btn,index) => {

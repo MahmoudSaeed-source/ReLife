@@ -1,2 +1,247 @@
 @import '../css/root.css';
 @import './mainStyle.css';
+
+header{
+margin-bottom: -150px !important;
+}
+main{
+  width: 100%;
+  height: auto;
+}
+.cart_Page_Content{
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.cart_Title{
+  width: 100%;
+  height: 10% !important;
+  display: none;
+}
+.cart_content{
+  width: 100%;
+  height: 90% !important;
+  display: flex;
+
+margin-top:30px;
+}
+.display_products_cart{
+  width: 60%;
+  overflow: auto;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+   
+}
+
+.display_product {
+  display: flex;
+  width: 100%;
+  height: 130px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.image_cart {
+  width: 20%;
+  height: 100%;
+}
+
+.image_cart img {
+  width: 100%;
+  height: 100%;
+}
+
+.name_product {
+  width: 25%;
+  height: 100%;
+  color: var(--main-font-color-title);
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.product_Price {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-font-color-title);
+
+}
+
+.increment_decrement {
+  width: 30%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.increment_decrement span {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: var(--main-font-color-title);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  margin-right: 10px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  cursor: pointer;
+}
+
+.remove {
+  width: 10%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove svg {
+  color: red;
+  cursor: pointer;
+}
+.payments {
+  width: 40%;
+  height: 100%;
+  display:flex;
+  flex-direction: column;
+  padding: 20px;
+
+}
+.payments h4{
+  width: 100%;
+  height: 60px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+margin-bottom: 20px;
+color: var(--paragraph-color);
+}
+.payment_way {
+width: 100%;
+height: auto;
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+flex-direction: column;
+padding: 10px;
+}
+.payment_way .Title_payment{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color:var(--paragraph-color);
+  font-family: var(--paragraph-font-family-Ar);
+
+}
+form{
+  width: 100%;
+}
+.main_input{
+  margin-left: 10px;
+}
+.Electronic_wallet_phon{
+  width: 100%;
+  height: 100px;
+ 
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding:8px;
+  display: none;
+}
+.Electronic_wallet_phon input{
+  background-color: #c4e9c7;
+    border: none;
+    margin: 8px 0;
+    padding: 12px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+    color:green;
+    text-align: center;
+}
+form button{
+  background-color: #25b609dd;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.donate_To_Whom{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top:20px;
+  margin-bottom:12px;
+  display: none
+}
+.donate_To_Whom .whom{
+  width: 90%;
+  height: 60px;
+  display: flex;margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+}
+.donate_To_Whom .whom label{
+  font-family: var(--paragraph-font-family-Ar);
+  font-size: 16px;
+  color:var(--paragraph-color);
+  margin-right: 10px;
+}
+.main_Input_Content{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  padding: 5px;
+  font-family: var(--paragraph-font-family-Ar);
+box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  margin-bottom: 20px;
+  color: var(--paragraph-color);
+  font-size: 20px;
+}
+.main_Input_Content label{
+ color: var(--paragraph-color);
+ width: 80%;
+ display: flex;
+}
