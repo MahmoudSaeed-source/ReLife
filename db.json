@@ -9,8 +9,8 @@
       },
       "msg": [],
       "status_user": {
-        "is_Login": false,
-        "token": ""
+        "is_Login": true,
+        "token": "2SKGIrkqlbglf7XFhxln243ihHrx4oP0"
       },
       "Operations": [],
       "Default_payment_status": {

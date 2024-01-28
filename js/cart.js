@@ -207,4 +207,9 @@ function total_Price(products) {
   total_Coins_Dom.innerHTML = Total_Coins_calc;
     return Total_price_calc, Total_Coins_calc;
   }
-  // ######################  end total_Price function ##########################
+// ######################  end total_Price function ##########################
+
+
+
+// ######################  start total_Price function ##########################
+  
