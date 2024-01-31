@@ -713,7 +713,7 @@ font-family: var(--title-font-family-Ar);
   align-items: center;
   justify-content: center;
 }
-.social_Icons_footer svg{
+.social_Icons_footer i{
 color: var(--main-btn-color);
   cursor: pointer;
   padding: 15px;
@@ -756,3 +756,33 @@ margin-right: 20px;
   align-items: center;
 }
 /* end footer */
+
+
+/* start media query */
+@media (max-width:480px) {
+  body{
+    width: 100% !important;
+    height: auto;
+  }
+  header{
+    width: 100%;
+    margin:0 ;
+    padding: 0;
+  }
+  .container{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .user{
+    width: 100%;
+    
+  }
+  .social_Icons{
+    display: none;
+  }
+  .phon{
+    display: none;
+  }
+}
+/* end  media query */
