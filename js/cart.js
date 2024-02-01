@@ -5,6 +5,7 @@ let main_Input_Content_Input = document.querySelectorAll(".main_Input_Content in
 let total_Coins_Dom = document.querySelector(".total_Coins");
 let total_Price_Dom = document.querySelector(".total_price");
 const options_section = document.querySelectorAll(".options_section");
+const form_Payment = document.querySelector(".form_Payment");
 
 
 
@@ -210,6 +211,17 @@ function total_Price(products) {
 // ######################  end total_Price function ##########################
 
 
-
-// ######################  start total_Price function ##########################
+ 
+// ######################  start collect form data ##########################
+form_Payment.addEventListener('submit',(e) => {
+  e.preventDefault();
+  let FormCollect_Payment = new FormData(e.currentTarget);
+  let FormData_Object_Data = Object.fromEntries(
+    Array.from(FormCollect_Payment)
+  );
+  console.log(FormData_Object_Data);
+  console.log(FormCollect_Payment);
+  console.log('yes')
+})
+// ######################  end collect form data ##########################
   

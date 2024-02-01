@@ -56,7 +56,7 @@
             <h4 class="total_Coins">0</h4>
             <div class="payment_way">
               <h5 class="Title_payment">اختر طريقه استلام الاموال</h5>
-              <form>
+              <form class="form_Payment">
                 <div class="cash">
                   <div class="main_Input_Content">
                     <input type="checkbox" id="cash_way" name="cash" value="cash" class="main_input" />
@@ -73,7 +73,7 @@
                     <h6 class="title_Phon Title_payment">
                       ادخل رقم محفظتك الالكترونية
                     </h6>
-                    <input type="text" placeholder="رقم المحفظه الالكترونية" />
+                    <input type="text" placeholder="رقم المحفظه الالكترونية" name="number_wallet" />
                   </div>
                 </div>
                 <div class="donation open_section_hide" >
@@ -88,19 +88,19 @@
                     </div>
                     <div class="whom Orman">
                       <input type="checkbox" name="Orman" />
-                      <label>جمعيه الاورمان</label>
+                      <label for="Orman">جمعيه الاورمان</label>
                     </div>
                     <div class="whom National_Cancer">
                       <input type="checkbox" name="National_Cancer" />
-                      <label>المعهد القومى للاورام </label>
+                      <label for="National_Cancer">المعهد القومى للاورام </label>
                     </div>
                     <div class="whom National_Cancer">
                       <input type="checkbox" name="National_Cancer_5757" />
-                      <label> مستشفى 5757 </label>
+                      <label for="National_Cancer_5757"> مستشفى 5757 </label>
                     </div>
                     <div class="whom Gaza">
-                      <input type="checkbox" name="Gaza" />
-                      <label>تبرع الى غزه</label>
+                      <input type="checkbox" name="Gaza" id="Gaza"/>
+                      <label for="donation_For_Gaza" id="Gaza">تبرع الى غزه</label>
                     </div>
                   </div>
                 </div>
