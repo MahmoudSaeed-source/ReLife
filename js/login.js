@@ -31,12 +31,43 @@ form_Sign_In.addEventListener("submit", (e) => {
           console.log(user);
           user_LogIn_Don();
           setTimeout(() => {
-            window.location.replace("../index.html");
-            window.history.replaceState(
-              {},
-              document.title,
-              window.location.href
-            );
+            if(document.referrer === "http://localhost:5173/index.html") {
+              window.location.replace("../index.html");
+              window.history.replaceState(
+                {},
+                document.title,
+                window.location.href
+              );
+            }else if (document.referrer === "http://localhost:5173/index.html") {
+                window.location.replace("../index.html");
+                window.history.replaceState(
+                  {},
+                  document.title,
+                  window.location.href
+                );
+              }else if(document.referrer === 'http://localhost:5173/page/products.html') {
+                window.location.replace("../page/products.html");
+                window.history.replaceState(
+                  {},
+                  document.title,
+                  window.location.href
+                );
+            }else if (document.referrer === "http://localhost:5173/page/cart.html") {
+              window.location.replace("../page/cart.html");
+              window.history.replaceState(
+                {},
+                document.title,
+                window.location.href
+              );
+            } else {
+               window.location.replace("../index.html");
+               window.history.replaceState(
+                 {},
+                 document.title,
+                 window.location.href
+               );
+            }
+        
           }, 2000);
         } else {
           user_LogIn_error();

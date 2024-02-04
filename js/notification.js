@@ -86,3 +86,17 @@ export function user_sign_out() {
   }).showToast();
 }
 //  end  user sign_out
+// start send details msg
+export function send_Details_Msg() {
+  Toastify({
+    text: "شكرا لحفاظك على البيئه سيتم ارسال رساله بالتفاصيل",
+    className: "info",
+    gravity: "top", // `top` or `bottom`
+    position: "center",
+    style: {
+      background: "#fff",
+      color: "green",
+    },
+  }).showToast();
+}
+// end send details msg

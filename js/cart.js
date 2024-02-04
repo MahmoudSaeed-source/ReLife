@@ -1,3 +1,6 @@
+import axios from "axios";
+import {send_Details_Msg} from './notification'
+
 let get_Data_from_LocalStorage = JSON.parse(
   localStorage.getItem("products"));
 let display_products_cart = document.querySelector(".display_products_cart");
@@ -212,16 +215,56 @@ function total_Price(products) {
 
 
  
+// ######################  start Get user form data ##########################
+async function add_Payment_Data_To_User(Data_Form) {
+  const get_User_Token = localStorage.getItem("token");
+  console.log(get_User_Token);
+  let users = await axios.get("http://localhost:3000/users");
+  let users_Data = users.data;
+  let get_User = users_Data.find((user) => user.status_user.token === get_User_Token);
+   get_User.Operations.push(Data_Form);
+  let user_Id = get_User.id
+  axios.put(`http://localhost:3000/users/${user_Id}`, {
+   ... get_User
+  });
+  send_Details_Msg()
+  localStorage.setItem('products',"");
+  setTimeout(() => {
+     window.location.replace("../index.html");
+     window.history.replaceState({}, document.title, window.location.href);
+  },2000)
+   
+}
+
+// ######################  end  Get user form data ##########################
 // ######################  start collect form data ##########################
 form_Payment.addEventListener('submit',(e) => {
   e.preventDefault();
+  const get_User_Token = localStorage.getItem('token');
+  
+  if(get_User_Token) {
+    
+  } else {
+     window.location.replace("http://localhost:5173/page/login_register.html");
+     window.history.replaceState({}, document.title, window.location.href);
+  }
+ 
   let FormCollect_Payment = new FormData(e.currentTarget);
   let FormData_Object_Data = Object.fromEntries(
     Array.from(FormCollect_Payment)
   );
+  console.log(FormData_Object_Data.payment_way);
   console.log(FormData_Object_Data);
-  console.log(FormCollect_Payment);
-  console.log('yes')
+  let cart_Operations = {
+    ...FormData_Object_Data,
+    products: {
+      product_buy_It:get_Data_from_LocalStorage,
+      Total_payment_many: +total_Price_Dom.innerHTML,
+      Total_payment_coins: +total_Coins_Dom.innerHTML,
+    },
+  };
+  add_Payment_Data_To_User(cart_Operations); 
+  
 })
 // ######################  end collect form data ##########################
   

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   <link rel="stylesheet" href="./css/all.min.css" />
   <link rel="stylesheet" href="../css/cart.css" />
   <title>Cart</title>
@@ -59,13 +60,13 @@
               <form class="form_Payment">
                 <div class="cash">
                   <div class="main_Input_Content">
-                    <input type="checkbox" id="cash_way" name="cash" value="cash" class="main_input" />
+                    <input type="checkbox" id="cash_way" name="payment_way" value="cash" class="main_input" />
                     <label for="option1" class="main_label">نقدى</label>
                   </div>
                 </div>
                 <div class=" Electronic_wallet open_section_hide">
                   <div class="main_Input_Content">
-                    <input type="checkbox" id="Electronic_wallet_Way" name="Electronic_wallet" value="Electronic_wallet"
+                    <input type="checkbox" id="Electronic_wallet_Way" name="payment_way" value="Electronic_wallet"
                       class="main_input" data-section = "1"/>
                     <label for="Electronic_wallet_Way" class="main_label">محفظه الكترونية</label>
                   </div>
@@ -78,7 +79,7 @@
                 </div>
                 <div class="donation open_section_hide" >
                   <div class="main_Input_Content">
-                    <input type="checkbox" id="donation_Way" name="donation" value="donation" class="main_input" data-section = "2" />
+                    <input type="checkbox" id="donation_Way" name="payment_way" value="donation" class="main_input" data-section = "2" />
                     <label for="donation_Way" class="main_label">تبرع</label>
                   </div>
                   <div class="options_section donate_To_Whom" data-section = "2">
@@ -106,7 +107,7 @@
                 </div>
                 <div class="Coins">
                   <div class="main_Input_Content">
-                    <input type="checkbox" id="Coins_Way" name="Coins" value="Coins" class="main_input" />
+                    <input type="checkbox" id="Coins_Way" name="payment_way" value="Coins" class="main_input" />
                     <label for="Coins" class="main_label">الاستبدال
                       بالعملات</label>
                   </div>
@@ -166,6 +167,7 @@
       <span>&#174;</span>
     </h4>
   </footer>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="../all.min.js"></script>
   <script type="module" src="../js/cart.js"></script>
   <script type="module" src="../js/index.js"></script>

@@ -2,7 +2,7 @@
   "users": [
     {
       "info": {
-        "user_name": "MahmoudSaeed",
+        "user_name": "‪Mahmoud Said‬‏",
         "phon": "01010978391",
         "email": "ms2481988@gmail.com",
         "password": "Mm123456"
@@ -10,9 +10,352 @@
       "msg": [],
       "status_user": {
         "is_Login": true,
-        "token": "2SKGIrkqlbglf7XFhxln243ihHrx4oP0"
+        "token": "nEcv7KLTM0LL9DYcgSGdHc4Or1X8oIUp"
       },
-      "Operations": [],
+      "Operations": [
+        {
+          "Electronic_wallet": "Electronic_wallet",
+          "number_wallet": "01142974302",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "12",
+                "name": "كيسه",
+                "coins": 800,
+                "price": 80,
+                "urlImage": "../assets/products/Electronics/cpu.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": "80",
+            "Total_payment_coins": "800"
+          }
+        },
+        {
+          "number_wallet": "",
+          "donation": "donation",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "16",
+                "name": "لاب توب",
+                "coins": 7000,
+                "price": 700,
+                "urlImage": "../assets/products/Electronics/lap.png",
+                "weights": "القطعه",
+                "quantity": 1
+              },
+              {
+                "id": "19",
+                "name": "رواتر",
+                "coins": 500,
+                "price": 50,
+                "urlImage": "../assets/products/Electronics/rawter.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": "750",
+            "Total_payment_coins": "7500"
+          }
+        },
+        {
+          "number_wallet": "",
+          "Coins": "Coins",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "16",
+                "name": "لاب توب",
+                "coins": 7000,
+                "price": 700,
+                "urlImage": "../assets/products/Electronics/lap.png",
+                "weights": "القطعه",
+                "quantity": 1
+              },
+              {
+                "id": "19",
+                "name": "رواتر",
+                "coins": 500,
+                "price": 50,
+                "urlImage": "../assets/products/Electronics/rawter.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": "550",
+            "Total_payment_coins": "5500"
+          }
+        },
+        {
+          "cash": "cash",
+          "number_wallet": "",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "12",
+                "name": "كيسه",
+                "coins": 800,
+                "price": 80,
+                "urlImage": "../assets/products/Electronics/cpu.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": 80,
+            "Total_payment_coins": 800
+          }
+        },
+        {
+          "number_wallet": "",
+          "donation": "donation",
+          "National_Cancer_5757": "on",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "12",
+                "name": "كيسه",
+                "coins": 800,
+                "price": 80,
+                "urlImage": "../assets/products/Electronics/cpu.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": 80,
+            "Total_payment_coins": 800
+          }
+        },
+        {
+          "number_wallet": "",
+          "Coins": "Coins",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "12",
+                "name": "كيسه",
+                "coins": 800,
+                "price": 80,
+                "urlImage": "../assets/products/Electronics/cpu.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": 80,
+            "Total_payment_coins": 800
+          }
+        },
+        {
+          "cash": "cash",
+          "number_wallet": "",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "12",
+                "name": "كيسه",
+                "coins": 800,
+                "price": 80,
+                "urlImage": "../assets/products/Electronics/cpu.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": 80,
+            "Total_payment_coins": 800
+          }
+        },
+        {
+          "cash": "",
+          "number_wallet": "",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "12",
+                "name": "كيسه",
+                "coins": 800,
+                "price": 80,
+                "urlImage": "../assets/products/Electronics/cpu.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": 80,
+            "Total_payment_coins": 800
+          }
+        },
+        {
+          "cash": "cash",
+          "number_wallet": "",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "12",
+                "name": "كيسه",
+                "coins": 800,
+                "price": 80,
+                "urlImage": "../assets/products/Electronics/cpu.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": 80,
+            "Total_payment_coins": 800
+          }
+        },
+        {
+          "number_wallet": "",
+          "donation": "donation",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "12",
+                "name": "كيسه",
+                "coins": 800,
+                "price": 80,
+                "urlImage": "../assets/products/Electronics/cpu.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": 80,
+            "Total_payment_coins": 800
+          }
+        },
+        {
+          "number_wallet": "",
+          "Coins": "Coins",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "12",
+                "name": "كيسه",
+                "coins": 800,
+                "price": 80,
+                "urlImage": "../assets/products/Electronics/cpu.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": 80,
+            "Total_payment_coins": 800
+          }
+        },
+        {
+          "payment_way": "cash",
+          "number_wallet": "",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "12",
+                "name": "كيسه",
+                "coins": 800,
+                "price": 80,
+                "urlImage": "../assets/products/Electronics/cpu.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": 80,
+            "Total_payment_coins": 800
+          }
+        },
+        {
+          "payment_way": "cash",
+          "number_wallet": "",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "12",
+                "name": "كيسه",
+                "coins": 800,
+                "price": 80,
+                "urlImage": "../assets/products/Electronics/cpu.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": 80,
+            "Total_payment_coins": 800
+          }
+        },
+        {
+          "payment_way": "cash",
+          "number_wallet": "",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "12",
+                "name": "كيسه",
+                "coins": 800,
+                "price": 80,
+                "urlImage": "../assets/products/Electronics/cpu.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": 80,
+            "Total_payment_coins": 800
+          }
+        },
+        {
+          "payment_way": "cash",
+          "number_wallet": "",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "12",
+                "name": "كيسه",
+                "coins": 800,
+                "price": 80,
+                "urlImage": "../assets/products/Electronics/cpu.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": 80,
+            "Total_payment_coins": 800
+          }
+        },
+        {
+          "payment_way": "cash",
+          "number_wallet": "",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "12",
+                "name": "كيسه",
+                "coins": 800,
+                "price": 80,
+                "urlImage": "../assets/products/Electronics/cpu.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": 80,
+            "Total_payment_coins": 800
+          }
+        },
+        {
+          "payment_way": "cash",
+          "number_wallet": "",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "12",
+                "name": "كيسه",
+                "coins": 800,
+                "price": 80,
+                "urlImage": "../assets/products/Electronics/cpu.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": 80,
+            "Total_payment_coins": 800
+          }
+        }
+      ],
       "Default_payment_status": {
         "cash": true,
         "Electronic_wallet": false,
