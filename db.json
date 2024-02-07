@@ -59,7 +59,7 @@
           "msg_text_Two": "  تم استلام المنتجات",
           "msg_text_Three": "  تم استبدال المنتجات بالعملات",
           "msg_text_four": "  تم ايداع عدد 12100 فى حسابك عمله ",
-          "msg_status": false
+          "msg_status": true
         },
         {
           "date": "2024-02-06T18:05:03.543Z",
@@ -78,7 +78,7 @@
           "msg_text": " شكرا لحفاظك على البيئه وسوف يتم ارسال المندوب اليك فى خلال 3 ايام ",
           "date_after_3": "2024-02-09T19:17:53.292Z",
           "date_after_5": "2024-02-11T19:17:53.308Z",
-          "msg_status": false
+          "msg_status": true
         },
         {
           "date": "2024-02-06T19:17:53.292Z",
@@ -102,7 +102,7 @@
           "msg_text": " شكرا لحفاظك على البيئه وسوف يتم ارسال المندوب اليك فى خلال 3 ايام ",
           "date_after_3": "2024-02-09T19:22:04.030Z",
           "date_after_5": "2024-02-11T19:22:04.030Z",
-          "msg_status": false
+          "msg_status": true
         },
         {
           "date": "2024-02-06T19:24:00.136Z",
@@ -116,7 +116,7 @@
           "msg_text": " شكرا لحفاظك على البيئه وسوف يتم ارسال المندوب اليك فى خلال 3 ايام ",
           "date_after_3": "2024-02-09T19:30:23.488Z",
           "date_after_5": "2024-02-11T19:30:23.488Z",
-          "msg_status": false
+          "msg_status": true
         },
         {
           "date": "2024-02-06T19:30:23.488Z",
@@ -250,6 +250,30 @@
         {
           "date": "2024-02-06T21:47:01.992Z",
           "msg_text": "   شكرا لمحافظتك على البيئة تم استلام المنتجات وتم استبدال المنتجات بمبلغ 200 بعملات وتم اضافه عدد 2000  عمله فى حسابك  ",
+          "msg_status": true
+        },
+        {
+          "date": "2024-02-07T00:31:07.715Z",
+          "msg_text": " شكرا لحفاظك على البيئه وسوف يتم ارسال المندوب اليك فى خلال 3 ايام ",
+          "date_after_3": "2024-02-10T00:31:07.715Z",
+          "date_after_5": "2024-02-12T00:31:07.715Z",
+          "msg_status": false
+        },
+        {
+          "date": "2024-02-07T00:31:07.715Z",
+          "msg_text": "   شكرا لمحافظتك على البيئة تم استلام المنتجات وتم التبرع بمبلغ 180جنية لحساب  مستشفى 5757  ",
+          "msg_status": true
+        },
+        {
+          "date": "2024-02-07T00:33:59.511Z",
+          "msg_text": " شكرا لحفاظك على البيئه وسوف يتم ارسال المندوب اليك فى خلال 3 ايام ",
+          "date_after_3": "2024-02-10T00:33:59.511Z",
+          "date_after_5": "2024-02-12T00:33:59.511Z",
+          "msg_status": false
+        },
+        {
+          "date": "2024-02-07T00:33:59.511Z",
+          "msg_text": "   شكرا لمحافظتك على البيئة تم استلام المنتجات وتم التبرع بمبلغ 350جنية لحساب  مستشفى 57357  ",
           "msg_status": true
         }
       ],
@@ -830,6 +854,57 @@
             "Total_payment_many": 200,
             "Total_payment_coins": 2000,
             "operations_Date": "2024-02-06T21:47:01.957Z"
+          }
+        },
+        {
+          "number_wallet": "",
+          "payment_way": "donation",
+          "To_who": " مستشفى 5757 ",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "12",
+                "name": "كيسه",
+                "coins": 800,
+                "price": 80,
+                "urlImage": "../assets/products/Electronics/cpu.png",
+                "weights": "القطعه",
+                "quantity": 1
+              },
+              {
+                "id": "1",
+                "name": "كتب",
+                "coins": 1000,
+                "price": 100,
+                "urlImage": "../assets/products/paper/books.png",
+                "weights": "كيلو",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": 180,
+            "Total_payment_coins": 1800,
+            "operations_Date": "2024-02-07T00:31:07.683Z"
+          }
+        },
+        {
+          "number_wallet": "",
+          "payment_way": "donation",
+          "To_who": " مستشفى 57357 ",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "18",
+                "name": "طابعه",
+                "coins": 3500,
+                "price": 350,
+                "urlImage": "../assets/products/Electronics/printer.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": 350,
+            "Total_payment_coins": 3500,
+            "operations_Date": "2024-02-07T00:33:59.498Z"
           }
         }
       ],

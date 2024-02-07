@@ -319,7 +319,7 @@ async function add_Payment_Data_To_User(Data_Form, FormData_Object_Data) {
         msg_text: `   شكرا لمحافظتك على البيئة تم استلام المنتجات وتم التبرع بمبلغ ${many}جنية لحساب ${To_who} `,
         msg_status : false
       });
-       console.log(get_User.msg);
+       
       axios.put(`http://localhost:3000/users/${user_Id}`, { ...get_User });
     }, 2000);
   }

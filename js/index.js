@@ -133,7 +133,7 @@ axios.get("http://localhost:3000/users").then((res) => {
   let users_Data = res.data;
   let get_User = users_Data.find((user) => user.status_user.token === get_Token);
   let msg = get_User.msg;
-  console.log(msg)
+
   msg.forEach((sms,index) => {
    
     mail_content.innerHTML += ` <li class="sms" data-index = ${index}>
@@ -159,7 +159,7 @@ axios.get("http://localhost:3000/users").then((res) => {
 function display_Content_Massage(massage_Sms, msg, get_User) {
   massage_Sms.forEach((sms, index) => {
     sms.addEventListener("click", (e) => {
-      console.log(msg[index]);
+      
       mail_center.classList.remove("active");
       over_layer.classList.add("active");
       massage_content_document.innerHTML = `<div  class="from_who">
@@ -176,7 +176,7 @@ function display_Content_Massage(massage_Sms, msg, get_User) {
              </div>`;
       get_User.msg[index].msg_status = true;
       axios.put(`http://localhost:3000/users/${get_User.id}`, { ...get_User });
-      console.log(get_User.msg[index].msg_status);
+      
      get_User_login();
     });
   });
