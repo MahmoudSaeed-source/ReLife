@@ -1,4 +1,6 @@
 import axios from "axios";
+import Toastify from "toastify-js";
+import "toastify-js/src/toastify.css";
 import {alert_nav_add_To_cart} from './notification'
 let categories_Icons_Container = document.querySelector(
   ".categories_Icons_Container"
@@ -27,19 +29,27 @@ let products = [];
   try {
     Data = await data.data;
   } catch (err) {
-    console.log(err);
+ 
   }
   return Put_Category(Data), default_Product_display(Data);;
 })();
 //  end get data
 //  start get products  form localStorage
-  if (localStorage.getItem("products")) {
-    let DataLocal = JSON.parse(localStorage.getItem("products"));
-    products_In_Cart = DataLocal;
-    count_In_Cart.innerHTML = products_In_Cart.length;
-    display_Product_From_Cart_To_Dom(); 
-
+get_Products_From_LocalStorage();
+function get_Products_From_LocalStorage() {
+   if (localStorage.getItem("products")) {
+     let DataLocal = JSON.parse(localStorage.getItem("products"));
+     products_In_Cart = DataLocal;
+   
+     let total_Products = products_In_Cart.reduce(
+       (current, product) => current + product.quantity,
+       0
+     );
+     count_In_Cart.innerHTML = total_Products;
+     display_Product_From_Cart_To_Dom();
+   }
 }
+ 
 //  end get products  form localStorage
   
 
@@ -146,8 +156,11 @@ function add_To_Cart(Btn) {
          products_In_Cart.push({ ...get_element,quantity: 1 });
          alert_nav_add_To_cart();
        }
-
-       count_In_Cart.innerHTML = products_In_Cart.length;
+       let total_Products = products_In_Cart.reduce(
+         (current, product) => current + product.quantity,
+         0
+       );
+       count_In_Cart.innerHTML = total_Products;
        localStorage.setItem('products',JSON.stringify(products_In_Cart))
        display_Product_From_Cart_To_Dom();
         
@@ -211,6 +224,7 @@ function increment() {
       localStorage.setItem("products", JSON.stringify(products_In_Cart));
       display_Product_From_Cart_To_Dom();
       total_Price();
+      get_Products_From_LocalStorage();
     })
   })
 }
@@ -224,6 +238,7 @@ function decrement() {
         localStorage.setItem("products", JSON.stringify(products_In_Cart));
         display_Product_From_Cart_To_Dom();
         total_Price();
+        get_Products_From_LocalStorage();
       } 
     });
   });
@@ -237,7 +252,8 @@ function remove_product() {
      localStorage.setItem("products", JSON.stringify(products_In_Cart));
      display_Product_From_Cart_To_Dom();
      total_Price();
-      count_In_Cart.innerHTML = products_In_Cart.length;
+     get_Products_From_LocalStorage();
+     
    });
  });
 }

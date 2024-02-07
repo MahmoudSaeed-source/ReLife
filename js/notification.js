@@ -1,3 +1,5 @@
+import Toastify from "toastify-js";
+import "toastify-js/src/toastify.css";
 // start alert_Register_Done
 export function alert_Register_Don() {
   Toastify({
@@ -26,7 +28,6 @@ export function alert_nav_add_To_cart() {
   }).showToast();
 }
 // end add to cart done
-
 
 // start email_Register_Before
 export function email_Register_Before() {
@@ -100,3 +101,17 @@ export function send_Details_Msg() {
   }).showToast();
 }
 // end send details msg
+// start you have a new msg
+export function msg () {
+  Toastify({
+    text: "لديك رساله جديده",
+    className: "info",
+    gravity: "top", // `top` or `bottom`
+    position: "center",
+    style: {
+      background: "#fff",
+      color: "green",
+    },
+  }).showToast();
+}
+// end you have a new msg

@@ -39,8 +39,8 @@
 
 .counter_coins {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 12px;
+  left: 2px;
 }
 
 .mail {
@@ -59,8 +59,8 @@
 
 .counter_mail {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 15px;
+  left: 13px;
 }
 
 .user_nav {

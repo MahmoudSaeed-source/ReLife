@@ -72,7 +72,7 @@ margin-top:30px;
   font-size: 18px;
 }
 
-.product_Price {
+.product_Price,.product_Coins {
   width: 15%;
   height: 100%;
   display: flex;
@@ -129,15 +129,22 @@ margin-top:30px;
   padding: 20px;
 
 }
-.payments h4{
+.payments .total_content{
   width: 100%;
   height: 60px;
  display: flex;
  align-items: center;
  justify-content: center;
-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 margin-bottom: 20px;
 color: var(--paragraph-color);
+}
+.payments .total_content h4{
+  margin-right: 10px;
+  font-family: var(--title-font-family-Ar);
+}
+.payments .total_content .total_Text_coins{
+  color: gold !important;
 }
 .payment_way {
 width: 100%;
@@ -212,20 +219,29 @@ form button{
   margin-bottom:12px;
   display: none
 }
-.donate_To_Whom .whom{
-  width: 90%;
-  height: 60px;
+.donate_To_Whom .who_donation{
+  width: 100%;
+  height: 45px;
   display: flex;margin-bottom: 10px;
   align-items: center;
   justify-content: center;
-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-
+border: 2px solid rgb(186, 244, 186);
+cursor: pointer;
+padding: 10px;
 }
-.donate_To_Whom .whom label{
+.donate_To_Whom .who_donation:hover{
+  border: 2px solid green
+}
+.donate_To_Whom .who_donation label{
   font-family: var(--paragraph-font-family-Ar);
   font-size: 16px;
   color:var(--paragraph-color);
-  margin-right: 10px;
+  margin-right: 20px;
+  width:90%
+}
+.donate_To_Whom .who_donation input{
+  width: 10%;
+  cursor: pointer;
 }
 .main_Input_Content{
   width: 100%;
@@ -244,4 +260,10 @@ box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
  color: var(--paragraph-color);
  width: 80%;
  display: flex;
+}
+.buy_Now{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
