@@ -814,6 +814,9 @@ main {
 .products_can_Sell_it .swiper-slide:hover > .product-Title {
   display: flex;
 }
+.product-Title h4 a{
+  color:#fff !important
+}
 /* end products_can_Sell_it */
 /* end main */
 
