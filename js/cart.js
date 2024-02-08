@@ -302,15 +302,15 @@ async function add_Payment_Data_To_User(Data_Form, FormData_Object_Data) {
      
     }, 2000);
   }
-  if (FormData_Object_Data.payment_way === "Electronic_wallet") {
+  if(FormData_Object_Data.payment_way === "Electronic_wallet") {
+    get_User.msg.push({
+      date: get_Date,
+      msg_text: ` شكرا لمحافظتك على البيئة تم استلام المنتجات تم ايداع مبلغ ${many} جنية  فى محفظتك الالكترونية رقم ${number_Wallet}`,
+      msg_status: false,
+    });
     setTimeout(() => {
-      get_User.msg.push({
-        date: get_Date,
-        msg_text: ` شكرا لمحافظتك على البيئة تم استلام المنتجات تم ايداع مبلغ ${many} جنية  فى محفظتك الالكترونية رقم ${number_Wallet}`,
-        msg_status: false,
-      });
-      axios.put(`http://localhost:3000/users/${user_Id}`, { ...get_User });
-    }, 2000);
+     axios.put(`http://localhost:3000/users/${user_Id}`, { ...get_User });
+    },7000);
   }
   if (FormData_Object_Data.payment_way === "donation") {
     setTimeout(() => {

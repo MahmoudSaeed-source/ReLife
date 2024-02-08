@@ -1,5 +1,7 @@
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import "sweetalert2/dist/sweetalert2.all";
 // start alert_Register_Done
 export function alert_Register_Don() {
   Toastify({
@@ -115,3 +117,20 @@ export function msg () {
   }).showToast();
 }
 // end you have a new msg
+
+export function confirm_Login() {
+  Swal.fire({
+    title: "تم تسجيل الدخول",
+    text: "مرحبا بعودتك",
+    icon: "success",
+   
+  });
+}
+export function confirm_SignOut() {
+  Swal.fire({
+    title: "تم تسجيل الخروج",
+    text: "شكرا لك ",
+    icon: "success",
+   
+  });
+}

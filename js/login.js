@@ -1,8 +1,9 @@
 import axios from "axios";
 import Toastify from "toastify-js";
 import "toastify-js/src/toastify.css";
-import { user_LogIn_Don } from '../js/notification';
-import { user_LogIn_error } from "../js/notification";
+import {confirm_Login} from './notification'
+import { user_LogIn_Don } from './notification';
+import { user_LogIn_error } from "./notification";
 let email_Sign_In = document.getElementById("email_Sign_In");
 let password_Sign_In = document.getElementById("password_Sign_In");
 let form_Sign_In = document.getElementById("form_Sign_In");
@@ -13,7 +14,8 @@ form_Sign_In.addEventListener("submit", (e) => {
   let email_Sign_In_value = email_Sign_In.value;
   let password_Sign_In_value = password_Sign_In.value;
    let email_next_element = email_Sign_In.nextElementSibling;
-   let password_Sign_In_next_element = password_Sign_In.nextElementSibling;
+  let password_Sign_In_next_element = password_Sign_In.nextElementSibling;
+ 
   if(email_Sign_In_value === "" || email_Sign_In_value === undefined || email_Sign_In_value === null) {
    email_next_element.style.display = "flex";
   } else {
@@ -37,15 +39,17 @@ form_Sign_In.addEventListener("submit", (e) => {
           user.info.email === email_Sign_In_value &&
           user.info.password === password_Sign_In_value
       );
-      let user_id = find_user.id
+    
+      if(find_user) {
+        let user_id = find_user.id;
         let user_Api = `http://localhost:3000/users/${user_id}`;
-        if (find_user) {
           axios.put(user_Api, {
             ...find_user,
             status_user: { is_Login: true, token: newToken },
           });
           localStorage.setItem("token", newToken);
-          user_LogIn_Don();
+        user_LogIn_Don();
+        confirm_Login()
           setTimeout(() => {
             if (document.referrer === "http://localhost:5173/index.html") {
               window.location.replace("../index.html");

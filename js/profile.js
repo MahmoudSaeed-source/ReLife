@@ -80,18 +80,19 @@ function user_Operations(get_User) {
       operation.products.product_buy_It.forEach((product) => {
         productsHTML += `<div class = "products_names">${product.name}</div>`; // Add each product name
       });
-
+      const total_Quantity = operation.products.product_buy_It.reduce((cu,item) => cu + item.quantity,0)
+     
       operationsHTML += `<tr class="operation_row">
                 <td class="pro_details no_op">${index + 1}</td>
                 <td class="pro_details date_op">${operation.products.operations_Date.substring(
-        0,
-        10
-      )}</td>
-                <td class="pro_details pro_Op">${operation.products.product_buy_It.length
-        }</td>
+                  0,
+                  10
+                )}</td>
+                <td class="pro_details pro_Op">${total_Quantity}</td>
                 <td class="pro_details pro_Op">${productsHTML}</td>
-                <td class="pro_details pro_Op">${operation.products.Total_payment_many
-        } ج.م</td>
+                <td class="pro_details pro_Op">${
+                  operation.products.Total_payment_many
+                } ج.م</td>
                 <td class="pro_details pay_way">${operation.payment_way}</td>
               </tr>`;
     });
