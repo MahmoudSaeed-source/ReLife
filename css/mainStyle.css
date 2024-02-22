@@ -3,6 +3,8 @@ body {
   width: 100%;
   height: auto;
   font-family: var(--btn-font-family-Ar);
+
+
 }
 .header {
   width: 100%;
@@ -516,6 +518,8 @@ color:var(--paragraph-color)
 /* start abut us */
 main {
   width: 100%;
+  max-width:100%;
+  overflow: hidden;
   height: auto;
   margin-top: var(--space-between-sections);
   z-index: 200;
@@ -823,11 +827,12 @@ main {
 /* start footer */
 footer {
   width: 100%;
-  height: 400px;
+max-width:100%;
+overflow:hidden;
+  height:auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+ 
   background-color: rgb(175, 213, 165);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -849,13 +854,14 @@ footer {
 }
 .Links_serves {
   width: 100%;
-  height: 250px;
+  height: 300px;
   display: flex;
   padding: 10px;
   margin-top: 20px;
 }
 .Links_ws {
   width: 300px;
+  height: 100%;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -944,20 +950,22 @@ footer {
 /* end footer */
 
 /* start media query */
-@media (max-width: 480px) {
+@media screen and  (max-width: 480px)  {
   body {
     width: 100% !important;
-    height: auto;
+    overflow: hidden;
   }
   header {
     width: 100%;
+    max-width:100%;
+    overflow: hidden;
     margin: 0;
     padding: 0;
   }
   .container {
-    margin: 0;
-    padding: 0;
-    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
   }
   .user {
     width: 100%;
@@ -967,6 +975,15 @@ footer {
   }
   .phon {
     display: none;
+  }
+  .swiper {
+    width:100%;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .Hero_Section{
+    max-width: 100%;
+    overflow: hidden;
   }
 }
 /* end  media query */
