@@ -139,6 +139,28 @@
       },
       "coins": 19000,
       "id": 1
+    },
+    {
+      "info": {
+        "user_name": "Mahmoud saeed",
+        "phon": "01010978391",
+        "email": "mahmoudsaid.wd@gmail.com",
+        "password": "Mm123456"
+      },
+      "msg": [],
+      "status_user": {
+        "is_Login": true,
+        "token": "uZRlAikNmUkkzEQjNOW0gHztlAv3eIFx"
+      },
+      "Operations": [],
+      "Default_payment_status": {
+        "cash": true,
+        "Electronic_wallet": false,
+        "donation": false,
+        "points": false
+      },
+      "coins": 0,
+      "id": 2
     }
   ]
 }
