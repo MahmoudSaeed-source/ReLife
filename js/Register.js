@@ -1,4 +1,6 @@
 import axios from "axios";
+import Toastify from "toastify-js";
+import "toastify-js/src/toastify.css";
 import { alert_Register_Don } from "./notification";
 import { email_Register_Before } from "./notification";
 const container = document.getElementById("container");
@@ -46,7 +48,7 @@ form_Register.addEventListener("submit", (e) => {
   let password_Valid = password_register.value.match(password_regex);
   let phon_number_Valid = phon_number.value.match(egyptianPhoneNumberRegex);
   let email_valid = email_Register.value.match(emailRegex);
-  console.log(formDataObject);
+ 
   if (!password_Valid) {
     password_register.nextElementSibling.style.display = "flex";
   }
@@ -112,7 +114,7 @@ email_valid,) {
       } 
     }
   } catch(err) {
-    console.log(err)
+    
   }
  
 }

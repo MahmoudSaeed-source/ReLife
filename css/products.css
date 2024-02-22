@@ -39,8 +39,8 @@
 
 .counter_coins {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 12px;
+  left: 2px;
 }
 
 .mail {
@@ -59,8 +59,8 @@
 
 .counter_mail {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 15px;
+  left: 13px;
 }
 
 .user_nav {
@@ -168,7 +168,7 @@
  font-size: 18px;
  font-family: var(--paragraph-font-family-Ar);
  color: var(--main-font-color-title);
-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
 padding: 20px;
 }
 .total_Price_content.active{
@@ -199,7 +199,8 @@ padding: 20px;
   display: none;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+margin-top: 10px;
   cursor: pointer;
   color:var(--main-btn-color)
 }

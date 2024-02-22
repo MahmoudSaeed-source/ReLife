@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  
   <link rel="stylesheet" href="../css/all.min.css">
   <link rel="stylesheet" href="../css/login_register.css"/>
   <title> LOGIN  |  REGISTER </title>
@@ -20,17 +20,17 @@
             <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
           </div>
           <span>سجل بالايميل </span>
-          <input class=" user_Name_register" type="text" placeholder="الاسم" name="user_name">
+          <input class=" user_Name_register" type="text" placeholder="الاسم" name="user_name" autocomplete="off">
           <span class="validation_Error user_Name_validition"></span>
-          <input class="phon_number" type="text" placeholder="الهاتف" name="phon">
+          <input class="phon_number" type="text" placeholder="الهاتف" name="phon" autocomplete="off">
           <span class="validation_Error phon_number_validition">
             يجب ان يكون رقم الهاتف مكون من 11 رقم ويبدا 01
           </span>
-          <input class="email_Register" type="email" placeholder="الايميل" name="email">
+          <input class="email_Register" type="email" placeholder="الايميل" name="email" autocomplete="off">
           <span class="validation_Error email_Registe_validition">
             يجب ان يحتوى الايميل على علامه @ وبعدها حروف انجليزية وبعدها . وبعدها حروف انجليزية
           </span>
-          <input  class="password_register" type="password" placeholder="كلمة السر" name="password" >
+          <input  class="password_register" type="password" placeholder="كلمة السر" name="password" autocomplete="off" >
           <span class="validation_Error password_register_validition"> يجب ان تحتوى كلمة السر على  حرف انجليزى كبير وحرف انجليزى صغير وارقام وان لايقل عن 8 </span>
           <button type="submit">انشاء حساب</button>
         </form>
@@ -45,9 +45,11 @@
             <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
           </div>
           <span>سجل بالايميل</span>
-          <input type="email" placeholder="الايميل" name = "email_Sign_in" id="email_Sign_In">
+          <input type="email" placeholder="الايميل" name = "email_Sign_in" id="email_Sign_In" class="email_Sign_In" autocomplete="off">
+          <span class="Error"> من فضلك اكتب الايميل</span>
          
-          <input type="password" placeholder="كلمة السر" name = 'password_Sign_in' id="password_Sign_In">
+          <input type="password" placeholder="كلمة السر" name = 'password_Sign_in' id="password_Sign_In" class="password_Sign_In" autocomplete="off">
+            <span class="Error">من فضلك اكتب الباسورد</span>
          
           <a href="#">نسيت الباسورد؟</a>
           <button type="submit" id="log_In_submit">تسجيل الدخول</button>
@@ -68,7 +70,7 @@
         </div>
       </div>
     </div>
-      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+     
   <script src="../all.min.js"></script>
   <script type='module' src="../js/Register.js"></script>
   <script type='module' src="../js/login.js"></script>

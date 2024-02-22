@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+   
   <link rel="stylesheet" href="./css/all.min.css" />
   <link rel="stylesheet" href="../css/cart.css" />
   <title>Cart</title>
@@ -31,7 +32,30 @@
               <span>01012345678</span>
             </div>
           </div>
+<div class="mail_center animate__animated animate__bounceInDown">
+                <h3 class="forwarded_massage">صندوق الوارد</h3>
+  <div class="leader">
+    <div>
+      <span class="read"></span>
+      <span>مقروءة</span>
+    </div>
+    <div>
+      <span class="circle"> </span>
+      <span>غير مقروءة</span>
+    </div>
+  </div>
+  <ul class="mail_content">
+    <!-- dynamic content -->
+  </ul>
+</div>
+<div class="over_layer">
+  <div class="massage_center_display">
+    <h4 class="massage_title">مركز الرسائل</h4>
+    <div class="massage_content_document">
 
+    </div>
+  </div>
+</div>
           <div class="main_Nav">
             <div class="logo">
               <h1>ReLife</h1>
@@ -52,20 +76,27 @@
       <div class="cart_Page_Content">
         <div class="cart_content">
           <div class="payments">
-            <h4 class="total_price">0</h4>
-            <h4 class="total_Coins">0</h4>
+            <div class="total_content">
+              <h4 class="total_price">0</h4>
+              <h4 class="total_Text">ج.م</h4>
+            </div>
+            <div class="total_content">
+              <h4 class="total_Coins">0</h4>
+              <h4 class="total_Text_coins"> عمله</h4>
+            </div>
+           
             <div class="payment_way">
               <h5 class="Title_payment">اختر طريقه استلام الاموال</h5>
               <form class="form_Payment">
                 <div class="cash">
                   <div class="main_Input_Content">
-                    <input type="checkbox" id="cash_way" name="cash" value="cash" class="main_input" />
+                    <input type="checkbox" id="cash_way" name="payment_way" value="cash" class="main_input" />
                     <label for="option1" class="main_label">نقدى</label>
                   </div>
                 </div>
                 <div class=" Electronic_wallet open_section_hide">
                   <div class="main_Input_Content">
-                    <input type="checkbox" id="Electronic_wallet_Way" name="Electronic_wallet" value="Electronic_wallet"
+                    <input type="checkbox" id="Electronic_wallet_Way" name="payment_way" value="Electronic_wallet"
                       class="main_input" data-section = "1"/>
                     <label for="Electronic_wallet_Way" class="main_label">محفظه الكترونية</label>
                   </div>
@@ -78,40 +109,42 @@
                 </div>
                 <div class="donation open_section_hide" >
                   <div class="main_Input_Content">
-                    <input type="checkbox" id="donation_Way" name="donation" value="donation" class="main_input" data-section = "2" />
+                    <input type="checkbox" id="donation_Way" name="payment_way" value="donation" class="main_input" data-section = "2" />
                     <label for="donation_Way" class="main_label">تبرع</label>
                   </div>
                   <div class="options_section donate_To_Whom" data-section = "2">
-                    <div class="whom message">
-                      <input type="checkbox" name="message" />
+                    <div class="who_donation">
+                      <input class = "donation_Input" type="checkbox"  name="To_who" value ="رساله" data-choose = '1' />
                       <label>جمعيه رساله</label>
                     </div>
-                    <div class="whom Orman">
-                      <input type="checkbox" name="Orman" />
-                      <label for="Orman">جمعيه الاورمان</label>
+                    <div class="who_donation">
+                      <input class = "donation_Input" type="checkbox"  name="To_who" value="جمعيه الاورمان" data-choose = '2' />
+                      <label >جمعيه الاورمان</label>
                     </div>
-                    <div class="whom National_Cancer">
-                      <input type="checkbox" name="National_Cancer" />
-                      <label for="National_Cancer">المعهد القومى للاورام </label>
+                    <div class="who_donation">
+                      <input class = "donation_Input" type="checkbox"  name="To_who" value="المعهد القومى للاورام "  data-choose = '3'/>
+                      <label >المعهد القومى للاورام </label>
                     </div>
-                    <div class="whom National_Cancer">
-                      <input type="checkbox" name="National_Cancer_5757" />
-                      <label for="National_Cancer_5757"> مستشفى 5757 </label>
+                    <div class="who_donation">
+                      <input class = "donation_Input" type="checkbox" name="To_who" value=" مستشفى 57357 " data-choose = '4' />
+                      <label > مستشفى 57357 </label>
                     </div>
-                    <div class="whom Gaza">
-                      <input type="checkbox" name="Gaza" id="Gaza"/>
-                      <label for="donation_For_Gaza" id="Gaza">تبرع الى غزه</label>
+                    <div class="who_donation">
+                      <input class = "donation_Input" type="checkbox" name="To_who" value=" تبرع الى غزه" data-choose = '5' />
+                      <label > تبرع الى غزه</label>
                     </div>
+                  
                   </div>
                 </div>
                 <div class="Coins">
                   <div class="main_Input_Content">
-                    <input type="checkbox" id="Coins_Way" name="Coins" value="Coins" class="main_input" />
+                    <input type="checkbox" id="Coins_Way" name="payment_way" value="Coins" class="main_input" />
                     <label for="Coins" class="main_label">الاستبدال
                       بالعملات</label>
                   </div>
-                </div>
-                <button type="submit">بيع الان</button>
+                </div >
+                <div class="buy_Now"><button type="submit">بيع الان</button></div>
+               
               </form>
             </div>
           </div>
@@ -166,6 +199,7 @@
       <span>&#174;</span>
     </h4>
   </footer>
+  
   <script src="../all.min.js"></script>
   <script type="module" src="../js/cart.js"></script>
   <script type="module" src="../js/index.js"></script>

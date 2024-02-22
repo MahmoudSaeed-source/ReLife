@@ -2,24 +2,142 @@
   "users": [
     {
       "info": {
-        "user_name": "MahmoudSaeed",
-        "phon": "01010978391",
-        "email": "ms2481988@gmail.com",
+        "user_name": "‪Mahmoud Said‬‏",
+        "phon": "01142974302",
+        "email": "mm@gmail.com",
         "password": "Mm123456"
       },
-      "msg": [],
+      "msg": [
+        {
+          "date": "2024-02-08T22:14:54.268Z",
+          "msg_text": " شكرا لحفاظك على البيئه وسوف يتم ارسال المندوب اليك فى خلال 3 ايام ",
+          "date_after_3": "2024-02-11T22:14:54.268Z",
+          "date_after_5": "2024-02-13T22:14:54.268Z",
+          "msg_status": true
+        },
+        {
+          "date": "2024-02-08T22:14:54.268Z",
+          "msg_text": " شكرا لمحافظتك على البيئة تم استلام المنتجات تم ايداع مبلغ 640 جنية  فى محفظتك الالكترونية رقم 01142974302",
+          "msg_status": true
+        },
+        {
+          "date": "2024-02-08T22:16:07.312Z",
+          "msg_text": " شكرا لحفاظك على البيئه وسوف يتم ارسال المندوب اليك فى خلال 3 ايام ",
+          "date_after_3": "2024-02-11T22:16:07.312Z",
+          "date_after_5": "2024-02-13T22:16:07.312Z",
+          "msg_status": true
+        },
+        {
+          "date": "2024-02-08T22:16:07.312Z",
+          "msg_text": "   شكرا لمحافظتك على البيئة تم استلام المنتجات وتم استبدال المنتجات بمبلغ 1900 بعملات وتم اضافه عدد 19000  عمله فى حسابك  ",
+          "msg_status": true
+        },
+        {
+          "date": "2024-02-08T22:17:23.357Z",
+          "msg_text": " شكرا لحفاظك على البيئه وسوف يتم ارسال المندوب اليك فى خلال 3 ايام ",
+          "date_after_3": "2024-02-11T22:17:23.357Z",
+          "date_after_5": "2024-02-13T22:17:23.357Z",
+          "msg_status": false
+        },
+        {
+          "date": "2024-02-08T22:17:23.357Z",
+          "msg_text": "   شكرا لمحافظتك على البيئة تم استلام المنتجات وتم التبرع بمبلغ 30جنية لحساب  مستشفى 57357  ",
+          "msg_status": true
+        }
+      ],
       "status_user": {
-        "is_Login": true,
-        "token": "2SKGIrkqlbglf7XFhxln243ihHrx4oP0"
+        "is_Login": false,
+        "token": ""
       },
-      "Operations": [],
+      "Operations": [
+        {
+          "payment_way": "Electronic_wallet",
+          "number_wallet": "01142974302",
+          "To_who": "المعهد القومى للاورام ",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "2",
+                "name": "اوراق فارغه",
+                "coins": 800,
+                "price": 80,
+                "urlImage": "../assets/products/paper/blankpaper.png",
+                "weights": "كيلو",
+                "quantity": 5
+              }
+            ],
+            "Total_payment_many": 640,
+            "Total_payment_coins": 6400,
+            "operations_Date": "2024-02-08T22:14:54.230Z"
+          }
+        },
+        {
+          "number_wallet": "",
+          "payment_way": "Coins",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "17",
+                "name": "هاتف",
+                "coins": 2000,
+                "price": 200,
+                "urlImage": "../assets/products/Electronics/phon.png",
+                "weights": "القطعه",
+                "quantity": 4
+              },
+              {
+                "id": "18",
+                "name": "طابعه",
+                "coins": 3500,
+                "price": 350,
+                "urlImage": "../assets/products/Electronics/printer.png",
+                "weights": "القطعه",
+                "quantity": 3
+              },
+              {
+                "id": "19",
+                "name": "رواتر",
+                "coins": 500,
+                "price": 50,
+                "urlImage": "../assets/products/Electronics/rawter.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": 1900,
+            "Total_payment_coins": 19000,
+            "operations_Date": "2024-02-08T22:16:07.269Z"
+          }
+        },
+        {
+          "number_wallet": "",
+          "payment_way": "donation",
+          "To_who": " مستشفى 57357 ",
+          "products": {
+            "product_buy_It": [
+              {
+                "id": "22",
+                "name": "سماعات خارجية",
+                "coins": 300,
+                "price": 30,
+                "urlImage": "../assets/products/Electronics/speaker.png",
+                "weights": "القطعه",
+                "quantity": 1
+              }
+            ],
+            "Total_payment_many": 30,
+            "Total_payment_coins": 300,
+            "operations_Date": "2024-02-08T22:17:23.318Z"
+          }
+        }
+      ],
       "Default_payment_status": {
         "cash": true,
         "Electronic_wallet": false,
         "donation": false,
         "points": false
       },
-      "coins": 0,
+      "coins": 19000,
       "id": 1
     }
   ]

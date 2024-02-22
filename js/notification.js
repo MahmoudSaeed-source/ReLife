@@ -1,3 +1,7 @@
+import Toastify from "toastify-js";
+import "toastify-js/src/toastify.css";
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import "sweetalert2/dist/sweetalert2.all";
 // start alert_Register_Done
 export function alert_Register_Don() {
   Toastify({
@@ -26,7 +30,6 @@ export function alert_nav_add_To_cart() {
   }).showToast();
 }
 // end add to cart done
-
 
 // start email_Register_Before
 export function email_Register_Before() {
@@ -86,3 +89,48 @@ export function user_sign_out() {
   }).showToast();
 }
 //  end  user sign_out
+// start send details msg
+export function send_Details_Msg() {
+  Toastify({
+    text: "شكرا لحفاظك على البيئه سيتم ارسال رساله بالتفاصيل",
+    className: "info",
+    gravity: "top", // `top` or `bottom`
+    position: "center",
+    style: {
+      background: "#fff",
+      color: "green",
+    },
+  }).showToast();
+}
+// end send details msg
+// start you have a new msg
+export function msg () {
+  Toastify({
+    text: "لديك رساله جديده",
+    className: "info",
+    gravity: "top", // `top` or `bottom`
+    position: "center",
+    style: {
+      background: "#fff",
+      color: "green",
+    },
+  }).showToast();
+}
+// end you have a new msg
+
+export function confirm_Login() {
+  Swal.fire({
+    title: "تم تسجيل الدخول",
+    text: "مرحبا بعودتك",
+    icon: "success",
+   
+  });
+}
+export function confirm_SignOut() {
+  Swal.fire({
+    title: "تم تسجيل الخروج",
+    text: "شكرا لك ",
+    icon: "success",
+   
+  });
+}

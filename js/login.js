@@ -1,6 +1,9 @@
 import axios from "axios";
-import { user_LogIn_Don } from '../js/notification';
-import { user_LogIn_error } from "../js/notification";
+import Toastify from "toastify-js";
+import "toastify-js/src/toastify.css";
+import {confirm_Login} from './notification'
+import { user_LogIn_Don } from './notification';
+import { user_LogIn_error } from "./notification";
 let email_Sign_In = document.getElementById("email_Sign_In");
 let password_Sign_In = document.getElementById("password_Sign_In");
 let form_Sign_In = document.getElementById("form_Sign_In");
@@ -8,42 +11,95 @@ let form_Sign_In = document.getElementById("form_Sign_In");
 // start find user try login
 form_Sign_In.addEventListener("submit", (e) => {
   e.preventDefault();
-  axios.get("http://localhost:3000/users").then((res) => {
-    let users_Data = res.data;
-    let newToken = createToken(32);
-    let email_Sign_In_value = email_Sign_In.value;
-    let password_Sign_In_value = password_Sign_In.value;
-      users_Data.forEach((user) => {
-        const userId = user.id;
-        const user_Email = user.info.email;
-        const user_Password = user.info.password;
-        let user_Api = `http://localhost:3000/users/${userId}`;
-        if (
-          user_Email === email_Sign_In_value &&
-          user_Password === password_Sign_In_value
-        ) {
+  let email_Sign_In_value = email_Sign_In.value;
+  let password_Sign_In_value = password_Sign_In.value;
+   let email_next_element = email_Sign_In.nextElementSibling;
+  let password_Sign_In_next_element = password_Sign_In.nextElementSibling;
+ 
+  if(email_Sign_In_value === "" || email_Sign_In_value === undefined || email_Sign_In_value === null) {
+   email_next_element.style.display = "flex";
+  } else {
+    email_next_element.style.display = "none";
+    
+  }
+  if (
+    password_Sign_In_value === "" ||
+    password_Sign_In_value === undefined ||
+    password_Sign_In_value === null
+  ) {
+    password_Sign_In_next_element.style.display = "flex";
+  } else {
+    password_Sign_In_next_element.style.display = "none";
+  }
+    axios.get("http://localhost:3000/users").then((res) => {
+      let users_Data = res.data;
+      let newToken = createToken(32);
+      let find_user = users_Data.find(
+        (user) =>
+          user.info.email === email_Sign_In_value &&
+          user.info.password === password_Sign_In_value
+      );
+    
+      if(find_user) {
+        let user_id = find_user.id;
+        let user_Api = `http://localhost:3000/users/${user_id}`;
           axios.put(user_Api, {
-            ...user,
+            ...find_user,
             status_user: { is_Login: true, token: newToken },
           });
-          localStorage.setItem("token",newToken);
-          console.log(user.status_user.token);
-          console.log(user);
-          user_LogIn_Don();
+          localStorage.setItem("token", newToken);
+        user_LogIn_Don();
+        confirm_Login()
           setTimeout(() => {
-            window.location.replace("../index.html");
-            window.history.replaceState(
-              {},
-              document.title,
-              window.location.href
-            );
+            if (document.referrer === "http://localhost:5173/index.html") {
+              window.location.replace("../index.html");
+              window.history.replaceState(
+                {},
+                document.title,
+                window.location.href
+              );
+            } else if (
+              document.referrer === "http://localhost:5173/index.html"
+            ) {
+              window.location.replace("../index.html");
+              window.history.replaceState(
+                {},
+                document.title,
+                window.location.href
+              );
+            } else if (
+              document.referrer === "http://localhost:5173/page/products.html"
+            ) {
+              window.location.replace("../page/products.html");
+              window.history.replaceState(
+                {},
+                document.title,
+                window.location.href
+              );
+            } else if (
+              document.referrer === "http://localhost:5173/page/cart.html"
+            ) {
+              window.location.replace("../page/cart.html");
+              window.history.replaceState(
+                {},
+                document.title,
+                window.location.href
+              );
+            } else {
+              window.location.replace("../index.html");
+              window.history.replaceState(
+                {},
+                document.title,
+                window.location.href
+              );
+            }
           }, 2000);
         } else {
-          user_LogIn_error();
+          user_LogIn_error()
         }
-      });
-    
-    }) 
+      
+       
+    })
   
 });
 
